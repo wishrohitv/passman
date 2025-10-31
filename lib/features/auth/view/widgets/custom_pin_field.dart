@@ -27,6 +27,7 @@ class _CustomPinFieldState extends State<CustomPinField> {
         controller: _focusNode[index].values.first,
         maxLength: 1,
         textStyle: TextStyle(fontSize: 18.0),
+        keyboardType: TextInputType.number,
         obscure: true,
         counter: SizedBox.shrink(),
         textInputAction: _focusNode.length - 1 == index
