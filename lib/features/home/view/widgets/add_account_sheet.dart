@@ -34,6 +34,7 @@ class _AddAccountSheetState extends State<AddAccountSheet>
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passordController = TextEditingController();
   final TextEditingController _noteController = TextEditingController();
+  IconData accountIconData = Icons.person_add_alt_1;
 
   // Card form objects
   late List<FocusNode> _focusNode;
@@ -116,14 +117,18 @@ class _AddAccountSheetState extends State<AddAccountSheet>
                             controller: _accountTypeTextController,
                             textInputAction: TextInputAction.next,
                             width: double.maxFinite,
-                            leadingIcon: Icon(Icons.person_add_alt_1),
+                            leadingIcon: Icon(accountIconData),
                             label: Text("Account type"),
-                            onSelected: (value) {},
+                            onSelected: (value) {
+                              setState(() {
+                                accountIconData = value!;
+                              });
+                            },
                             dropdownMenuEntries: [
                               ...AccountTypeEnum.values.map(
                                 (value) => DropdownMenuEntry(
                                   leadingIcon: Icon(value.accountType.iconData),
-                                  value: value.accountType.typeName,
+                                  value: value.accountType.iconData,
                                   label: value.accountType.typeName
                                       .toUpperCase(),
                                 ),
