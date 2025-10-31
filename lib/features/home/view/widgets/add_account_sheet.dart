@@ -64,6 +64,11 @@ class _AddAccountSheetState extends State<AddAccountSheet>
     _emailController.dispose();
     _passordController.dispose();
     _noteController.dispose();
+    _bankNameController.dispose();
+    _holderNameController.dispose();
+    _cvvPinController.dispose();
+    _greenPinController.dispose();
+    _cardNoteController.dispose();
     _focusNode.forEach((foucNode) => foucNode.dispose());
     super.dispose();
   }
