@@ -1,49 +1,50 @@
 # PassMan - Secure Password Manager
 
-Password manager application that helps you securely store and manage your sensitive information.
+PassMan is a secure, offline password manager that helps you store and manage sensitive information locally on your device.
 
 ## Features
 
-- Store account credentials securely
+- Securely store account credentials (username, password, notes)
 - Save bank card information
-- Choice of encryption methods (AES-256-CBC or XOR)
-- User-friendly interface
-- Offline storage for enhanced security
+- Choice of encryption methods: AES-256-CBC or XOR
+- User-friendly, responsive UI
+- Offline-only storage (no cloud syncing)
+- Option to export/import encrypted backups
 
 ## Security
 
-PassMan implements robust security measures:
-- Choose between AES-256-CBC or XOR encryption
-- All sensitive data is encrypted
-- No cloud storage - all data stays on your device
-- No internet permission required
+- All sensitive data is encrypted before storage
+- Choose between AES-256-CBC or XOR encryption implementations
+- No internet permission required — data never leaves your device
+
 ## Architecture
 
 Built using:
 - Hive for secure local storage
 - Provider for state management
-- Custom encryption implementation
+- MVVM (Model-View-ViewModel) architecture
+- Custom encryption components (plus optional use of the crypto package)
+
 ## Getting Started
 
 1. Clone the repository
 2. Run `flutter pub get`
-3. Build and run the application
+3. Build and run the application with `flutter run`
 
 ## Development
 
-Built with:
-- Flutter
-- Dart
-- SQLite for local storage
-- crypto package for encryption
+- Flutter for UI
+- Dart as the programming language
+- Use Hive for local data persistence
+- Encryption logic implemented in-app; `crypto` package optionally used for cryptographic primitives
 
 ## Privacy
 
-Your data never leaves your device. All sensitive information is encrypted locally using your choice of encryption method.
+Your data stays on your device. All sensitive information is encrypted locally and never uploaded to external servers.
 
 ## Contributing
 
-Feel free to submit issues and pull requests.
+Contributions, issues, and pull requests are welcome. Please follow the repository's contribution guidelines.
 
 ## License
 
