@@ -1,0 +1,77 @@
+{
+  "@@locale": "ru",
+  "appName": "PassMan",
+  "@appName": {
+    "description": "Название приложения"
+  },
+  "acceptTerm": "Согласиться с политикой и условиями",
+  "@acceptTerm": {
+    "description": "Политика и условия приложения"
+  },
+  "continueBtn": "Продолжить",
+  "@continueBtn": {
+    "description": "Нажмите кнопку продолжить"
+  },
+  "verifyItsYou": "Подтвердите, что это вы",
+  "@verifyItsYou": {
+    "description": "Проверка личности пользователя"
+  },
+  "incorrectPinMsg": "Неверный PIN. Попробуйте снова.",
+  "@incorrectPinMsg": {
+    "description": "Предупреждение о неверном PIN"
+  },
+  "greetings": "С возвращением",
+  "@greetings": {
+    "description": "Приветственное сообщение пользователю"
+  },
+  "yourName": "Ваше имя",
+  "@yourName": {
+    "description": "Поле для имени пользователя"
+  },
+  "safetyScore": "Оценка безопасности",
+  "@safetyScore": {
+    "description": "Показатель надежности паролей"
+  },
+  "totalPassword": "{value} паролей",
+  "@totalPassword": {
+    "description": "Всего паролей, сохраненных пользователем",
+    "placeholders": {
+      "value": {
+        "type": "int"
+      }
+    }
+  },
+  "categories": "Категории",
+  "@categories": {
+    "description": "Категории аккаунтов и карт"
+  },
+  "availableAvatars": "Доступные аватары",
+  "@availableAvatars": {
+    "description": "Список доступных аватаров"
+  },
+  "enterYourName": "Введите ваше имя",
+  "@enterYourName": {
+    "description": "Подсказка для поля ввода имени"
+  },
+  "security": "Безопасность",
+  "@security": {
+    "description": "Безопасность"
+  },
+  "securitySubtitle": "Сменить пароль, самоуничтожение",
+  "@securitySubtitle": {
+    "description": "Описание функций безопасности"
+  },
+  "language": "Язык {selectedLanguage}",
+  "@language": {
+    "description": "Заголовок кнопки выбора языка",
+    "placeholders": {
+      "selectedLanguage": {
+        "type": "String"
+      }
+    }
+  },
+  "languageSubtitle": "Сменить язык",
+  "@languageSubtitle": {
+    "description": "Подзаголовок для изменения языка"
+  }
+}

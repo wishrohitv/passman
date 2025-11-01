@@ -1,0 +1,77 @@
+{
+    "@@locale": "zh",
+    "appName": "密码管家",
+    "@appName": {
+        "description": "应用名称"
+    },
+    "acceptTerm": "同意隐私政策和条款",
+    "@acceptTerm": {
+        "description": "应用隐私政策与条款"
+    },
+    "continueBtn": "继续",
+    "@continueBtn": {
+        "description": "点击继续按钮"
+    },
+    "verifyItsYou": "验证您的身份",
+    "@verifyItsYou": {
+        "description": "验证是您本人"
+    },
+    "incorrectPinMsg": "PIN码错误。请再试一次。",
+    "@incorrectPinMsg": {
+        "description": "错误PIN提示"
+    },
+    "greetings": "欢迎回来",
+    "@greetings": {
+        "description": "欢迎用户的问候语"
+    },
+    "yourName": "您的名字",
+    "@yourName": {
+        "description": "用户名输入占位符"
+    },
+    "safetyScore": "安全评分",
+    "@safetyScore": {
+        "description": "密码安全评分"
+    },
+    "totalPassword": "{value} 个密码",
+    "@totalPassword": {
+        "description": "用户保存的总密码数量",
+        "placeholders": {
+            "value": {
+                "type": "int"
+            }
+        }
+    },
+    "categories": "类别",
+    "@categories": {
+        "description": "账户和卡片的类别"
+    },
+    "availableAvatars": "可用头像",
+    "@availableAvatars": {
+        "description": "可用头像"
+    },
+    "enterYourName": "输入您的名字",
+    "@enterYourName": {
+        "description": "输入框提示"
+    },
+    "security": "安全",
+    "@security": {
+        "description": "安全"
+    },
+    "securitySubtitle": "修改密码，自毁选项",
+    "@securitySubtitle": {
+        "description": "安全选项说明"
+    },
+    "language": "语言 {selectedLanguage}",
+    "@language": {
+        "description": "语言按钮标题",
+        "placeholders": {
+            "selectedLanguage": {
+                "type": "String"
+            }
+        }
+    },
+    "languageSubtitle": "更改语言",
+    "@languageSubtitle": {
+        "description": "语言更改副标题"
+    }
+}

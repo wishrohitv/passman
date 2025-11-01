@@ -1,0 +1,77 @@
+{
+    "@@locale": "bho",
+    "appName": "पासमैन",
+    "@appName": {
+        "description": "ऐप के नाव"
+    },
+    "acceptTerm": "नीति आ सर्त मान लीं",
+    "@acceptTerm": {
+        "description": "ऐप के नीति आ सर्त"
+    },
+    "continueBtn": "आगे बढ़ीं",
+    "@continueBtn": {
+        "description": "आगे बढ़े वाला बटन दबाईं"
+    },
+    "verifyItsYou": "पक्का करीं कि रउआ ही बानी",
+    "@verifyItsYou": {
+        "description": "पहचान पक्का करीं"
+    },
+    "incorrectPinMsg": "गलत पिन। फेर से कोशिश करीं।",
+    "@incorrectPinMsg": {
+        "description": "गलत पिन के चेतावनी"
+    },
+    "greetings": "फेर से स्वागत बा",
+    "@greetings": {
+        "description": "उपयोगकर्ता स्वागत संदेश"
+    },
+    "yourName": "रउआ के नाव",
+    "@yourName": {
+        "description": "नाव लिखे के जगह"
+    },
+    "safetyScore": "सुरक्षा स्कोर",
+    "@safetyScore": {
+        "description": "पासवर्ड के सुरक्षा माप"
+    },
+    "totalPassword": "{value} पासवर्ड",
+    "@totalPassword": {
+        "description": "कुल पासवर्ड जवन सहेजाइल बा",
+        "placeholders": {
+            "value": {
+                "type": "int"
+            }
+        }
+    },
+    "categories": "श्रेणी",
+    "@categories": {
+        "description": "खाता आ कार्ड के श्रेणी"
+    },
+    "availableAvatars": "उपलब्ध अवतार",
+    "@availableAvatars": {
+        "description": "उपलब्ध अवतार"
+    },
+    "enterYourName": "अपना नाव लिखीं",
+    "@enterYourName": {
+        "description": "नाव लिखे के संकेत"
+    },
+    "security": "सुरक्षा",
+    "@security": {
+        "description": "सुरक्षा"
+    },
+    "securitySubtitle": "पासवर्ड बदलीं, खुद नष्ट होखल",
+    "@securitySubtitle": {
+        "description": "सुरक्षा फीचर के विवरण"
+    },
+    "language": "भाषा {selectedLanguage}",
+    "@language": {
+        "description": "भाषा वाला बटन",
+        "placeholders": {
+            "selectedLanguage": {
+                "type": "String"
+            }
+        }
+    },
+    "languageSubtitle": "भाषा बदलीं",
+    "@languageSubtitle": {
+        "description": "भाषा बदलल के उपशीर्षक"
+    }
+}

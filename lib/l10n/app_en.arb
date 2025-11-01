@@ -1,0 +1,77 @@
+{
+  "@@locale": "en",
+  "appName": "PassMan",
+  "@appName": {
+    "description": "Name of the app"
+  },
+  "acceptTerm": "Agree to the policy and terms",
+  "@acceptTerm": {
+    "description": "Policy and terms of the app"
+  },
+  "continueBtn": "Continue",
+  "@continueBtn": {
+    "description": "Click on the continue button"
+  },
+  "verifyItsYou": "Verify it's you",
+  "@verifyItsYou": {
+    "description": "Verify it's you"
+  },
+  "incorrectPinMsg": "Incorrect PIN. Please try again.",
+  "@incorrectPinMsg": {
+    "description": "Incorrect pin warning"
+  },
+  "greetings": "Welecome back",
+  "@greetings": {
+    "description": "Greeting message for users"
+  },
+  "yourName": "Your name",
+  "@yourName": {
+    "description": "Place holder for user name"
+  },
+  "safetyScore": "Safety score",
+  "@safetyScore": {
+    "description": "Sefety score benchmak for passwords"
+  },
+  "totalPassword": "{value} Passwords",
+  "@totalPassword": {
+    "description": "Total password stored by user",
+    "placeholders": {
+      "value": {
+        "type": "int"
+      }
+    }
+  },
+  "categories": "Categories",
+  "@categories": {
+    "description": "Categories of Accounts and Cards"
+  },
+  "availableAvatars": "Available avatars",
+  "@availableAvatars": {
+    "description": "Avalable avatars"
+  },
+  "enterYourName": "Enter your name",
+  "@enterYourName": {
+    "description": "Hint text for text field"
+  },
+  "security": "Security",
+  "@security": {
+    "description": "Security "
+  },
+  "securitySubtitle": "Change password, self-destrution",
+  "@securitySubtitle": {
+    "description": "Helper text for describe seturity button features"
+  },
+  "language": "Language {selectedLanguage}",
+  "@language": {
+    "description": "Langauge button tile",
+    "placeholders": {
+      "selectedLanguage": {
+        "type": "String"
+      }
+    }
+  },
+  "languageSubtitle": "Change Languages",
+  "@languageSubtitle": {
+    "description": "Subtitle text for language"
+  }
+}

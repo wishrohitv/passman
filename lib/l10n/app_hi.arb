@@ -1,0 +1,77 @@
+{
+    "@@locale": "hi",
+    "appName": "पासमैन",
+    "@appName": {
+        "description": "ऐप का नाम"
+    },
+    "acceptTerm": "नीति और शर्तों से सहमत हों",
+    "@acceptTerm": {
+        "description": "ऐप की नीति और शर्तें"
+    },
+    "continueBtn": "जारी रखें",
+    "@continueBtn": {
+        "description": "जारी रखें बटन पर क्लिक करें"
+    },
+    "verifyItsYou": "सत्यापित करें कि यह आप हैं",
+    "@verifyItsYou": {
+        "description": "आपकी पहचान की पुष्टि करें"
+    },
+    "incorrectPinMsg": "गलत पिन। कृपया पुनः प्रयास करें।",
+    "@incorrectPinMsg": {
+        "description": "गलत पिन चेतावनी"
+    },
+    "greetings": "वापसी पर स्वागत है",
+    "@greetings": {
+        "description": "उपयोगकर्ता का स्वागत संदेश"
+    },
+    "yourName": "आपका नाम",
+    "@yourName": {
+        "description": "उपयोगकर्ता के नाम का स्थान"
+    },
+    "safetyScore": "सुरक्षा स्कोर",
+    "@safetyScore": {
+        "description": "पासवर्ड की सुरक्षा स्तर"
+    },
+    "totalPassword": "{value} पासवर्ड",
+    "@totalPassword": {
+        "description": "उपयोगकर्ता द्वारा सहेजे गए कुल पासवर्ड",
+        "placeholders": {
+            "value": {
+                "type": "int"
+            }
+        }
+    },
+    "categories": "श्रेणियाँ",
+    "@categories": {
+        "description": "खातों और कार्डों की श्रेणियाँ"
+    },
+    "availableAvatars": "उपलब्ध अवतार",
+    "@availableAvatars": {
+        "description": "उपलब्ध अवतार"
+    },
+    "enterYourName": "अपना नाम दर्ज करें",
+    "@enterYourName": {
+        "description": "नाम दर्ज करने का संकेत"
+    },
+    "security": "सुरक्षा",
+    "@security": {
+        "description": "सुरक्षा"
+    },
+    "securitySubtitle": "पासवर्ड बदलें, स्वयं-विनाश",
+    "@securitySubtitle": {
+        "description": "सुरक्षा विकल्पों का विवरण"
+    },
+    "language": "भाषा {selectedLanguage}",
+    "@language": {
+        "description": "भाषा बटन शीर्षक",
+        "placeholders": {
+            "selectedLanguage": {
+                "type": "String"
+            }
+        }
+    },
+    "languageSubtitle": "भाषा बदलें",
+    "@languageSubtitle": {
+        "description": "भाषा परिवर्तन उपशीर्षक"
+    }
+}

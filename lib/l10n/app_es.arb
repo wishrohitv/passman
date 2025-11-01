@@ -1,0 +1,77 @@
+{
+    "@@locale": "es",
+    "appName": "PassMan",
+    "@appName": {
+        "description": "Nombre de la aplicación"
+    },
+    "acceptTerm": "Aceptar la política y los términos",
+    "@acceptTerm": {
+        "description": "Política y términos de la aplicación"
+    },
+    "continueBtn": "Continuar",
+    "@continueBtn": {
+        "description": "Haz clic en el botón continuar"
+    },
+    "verifyItsYou": "Verifica que eres tú",
+    "@verifyItsYou": {
+        "description": "Verificación de identidad"
+    },
+    "incorrectPinMsg": "PIN incorrecto. Inténtalo de nuevo.",
+    "@incorrectPinMsg": {
+        "description": "Advertencia de PIN incorrecto"
+    },
+    "greetings": "Bienvenido de nuevo",
+    "@greetings": {
+        "description": "Mensaje de bienvenida para el usuario"
+    },
+    "yourName": "Tu nombre",
+    "@yourName": {
+        "description": "Campo para el nombre del usuario"
+    },
+    "safetyScore": "Puntaje de seguridad",
+    "@safetyScore": {
+        "description": "Nivel de seguridad de las contraseñas"
+    },
+    "totalPassword": "{value} Contraseñas",
+    "@totalPassword": {
+        "description": "Total de contraseñas guardadas por el usuario",
+        "placeholders": {
+            "value": {
+                "type": "int"
+            }
+        }
+    },
+    "categories": "Categorías",
+    "@categories": {
+        "description": "Categorías de cuentas y tarjetas"
+    },
+    "availableAvatars": "Avatares disponibles",
+    "@availableAvatars": {
+        "description": "Avatares disponibles"
+    },
+    "enterYourName": "Introduce tu nombre",
+    "@enterYourName": {
+        "description": "Texto de sugerencia para el campo de nombre"
+    },
+    "security": "Seguridad",
+    "@security": {
+        "description": "Seguridad"
+    },
+    "securitySubtitle": "Cambiar contraseña, autodestrucción",
+    "@securitySubtitle": {
+        "description": "Descripción de las opciones de seguridad"
+    },
+    "language": "Idioma {selectedLanguage}",
+    "@language": {
+        "description": "Título del botón de idioma",
+        "placeholders": {
+            "selectedLanguage": {
+                "type": "String"
+            }
+        }
+    },
+    "languageSubtitle": "Cambiar idioma",
+    "@languageSubtitle": {
+        "description": "Subtítulo de cambio de idioma"
+    }
+}
