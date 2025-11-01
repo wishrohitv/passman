@@ -8,12 +8,14 @@ class CustomListTile extends StatelessWidget {
   final String subtitle;
   final IconData leadingIcon;
   final VoidCallback onTap;
+  final Widget? trailing;
   const CustomListTile({
     super.key,
     required this.title,
     required this.subtitle,
     required this.leadingIcon,
     required this.onTap,
+    this.trailing,
   });
 
   @override
@@ -27,16 +29,20 @@ class CustomListTile extends StatelessWidget {
       child: InkWell(
         onTap: onTap,
         child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           spacing: 10.0,
           children: [
             CircleAvatar(child: Icon(leadingIcon)),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(title, style: Theme.of(context).textTheme.titleLarge),
-                Text(subtitle, style: Theme.of(context).textTheme.labelSmall),
-              ],
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(title, style: Theme.of(context).textTheme.titleLarge),
+                  Text(subtitle, style: Theme.of(context).textTheme.labelSmall),
+                ],
+              ),
             ),
+            trailing ?? Container()
           ],
         ),
       ),

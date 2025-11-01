@@ -23,11 +23,13 @@ class AuthViewmodel extends ChangeNotifier {
       ..setSelectedEncryptionAlgorithm = EncryptionTypeEnum.values.byName(
         _authLocalRepository.encryptionAlgorithm,
       )
-      ..pwEncrypitionKey = _authLocalRepository.pwEncryptionKey;
+      ..pwEncrypitionKey = _authLocalRepository.pwEncryptionKey
+      ..appLanguage = _authLocalRepository.appLanguage;
     notifyListeners();
   }
 
   String? get appPassword => _authLocalRepository.appPassword;
+  String? get appLanguage => _authLocalRepository.appLanguage;
   Future<void> addUserName(String value) async {
     await _authLocalRepository.addUserName(value);
     _settingsProvider.setUserName = value;
@@ -60,6 +62,12 @@ class AuthViewmodel extends ChangeNotifier {
 
   Future<void> addPwEncryptionKey(String value) async {
     await _authLocalRepository.addPwEncryptionKey(value);
+    notifyListeners();
+  }
+
+  Future<void> addAppLanguage(String ln) async {
+    await _authLocalRepository.addAppLanguage(ln);
+    _settingsProvider.appLanguage = ln;
     notifyListeners();
   }
 }

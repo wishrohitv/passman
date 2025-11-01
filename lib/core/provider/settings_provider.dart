@@ -7,6 +7,7 @@ class SettingsProvider extends ChangeNotifier {
   SettingsProvider._internal();
 
   String userName = "";
+  String appLanguage = "en";
   String userSelectedAvatar = Constants.avalaibleAvatars.first;
   String? appPassword;
   EncryptionTypeEnum selectedEncryptionAlgorithm = EncryptionTypeEnum.aes256cbc;
@@ -42,6 +43,10 @@ class SettingsProvider extends ChangeNotifier {
 
   set setInitialVector(String vector) {
     initialVector = vector;
+  }
+
+  set setAppLanguage(String ln) {
+    appLanguage = ln;
   }
 
   factory SettingsProvider() {

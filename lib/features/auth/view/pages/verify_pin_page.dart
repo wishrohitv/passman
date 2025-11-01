@@ -4,6 +4,7 @@ import 'package:passman/core/utils/show_toast.dart';
 import 'package:passman/features/auth/view/widgets/custom_pin_field.dart';
 import 'package:passman/features/home/view/pages/bottom_nav_bar_page.dart';
 import 'package:passman/features/home/viewmodel/home_viewmodel.dart';
+import 'package:passman/l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
 
 class VerifyPinPage extends StatelessWidget {
@@ -27,8 +28,9 @@ class VerifyPinPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              "Verify it's you",
+              AppLocalizations.of(context)!.verifyItsYou,
               style: Theme.of(context).textTheme.headlineMedium,
+              textAlign: TextAlign.center,
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 12.0),
@@ -50,7 +52,9 @@ class VerifyPinPage extends StatelessWidget {
                         ),
                       );
                     } else {
-                      showNotification("Incorrect PIN. Please try again.");
+                      showNotification(
+                        AppLocalizations.of(context)!.incorrectPinMsg,
+                      );
                     }
                   }
                 },

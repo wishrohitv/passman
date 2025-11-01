@@ -5,6 +5,7 @@ import 'package:lucide_icons_flutter/lucide_icons.dart';
 import 'package:passman/core/provider/settings_provider.dart';
 import 'package:passman/features/home/view/widgets/tab_button.dart';
 import 'package:passman/features/home/viewmodel/home_viewmodel.dart';
+import 'package:passman/l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
 
 class CustomAppBar extends StatelessWidget {
@@ -41,43 +42,54 @@ class CustomAppBar extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Row(
-              spacing: 10.0,
-              children: [
-                CircleAvatar(
-                  radius: 26.0,
-                  backgroundImage: AssetImage(
-                    settingsProvider.userSelectedAvatar,
-                  ),
-                ),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      "Welcome back",
-                      style: Theme.of(context).textTheme.labelLarge,
-                    ),
-                    Text(
-                      settingsProvider.userName.isEmpty
-                          ? "Your name"
-                          : settingsProvider.userName,
-                      style: Theme.of(context).textTheme.titleLarge,
-                      maxLines: 1,
-                      overflow: TextOverflow.ellipsis,
-                    ),
-                  ],
-                ),
-              ],
+            CircleAvatar(
+              radius: 26.0,
+              backgroundImage: AssetImage(settingsProvider.userSelectedAvatar),
             ),
-            Row(
-              spacing: 6.0,
-              children: [
-                IconButton.filled(onPressed: () {}, icon: Icon(Icons.search)),
-                IconButton.filled(
-                  onPressed: () {},
-                  icon: Icon(Icons.notifications_outlined),
-                ),
-              ],
+            Expanded(
+              child: Row(
+                spacing: 10.0,
+                children: [
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Flexible(
+                          child: FittedBox(
+                            child: Text(
+                              AppLocalizations.of(context)!.greetings,
+                              style: Theme.of(context).textTheme.labelLarge,
+                            ),
+                          ),
+                        ),
+                        FittedBox(
+                          child: Text(
+                            settingsProvider.userName.isEmpty
+                                ? AppLocalizations.of(context)!.yourName
+                                : settingsProvider.userName,
+                            style: Theme.of(context).textTheme.titleLarge,
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Flexible(
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                spacing: 6.0,
+                children: [
+                  IconButton.filled(onPressed: () {}, icon: Icon(Icons.search)),
+                  IconButton.filled(
+                    onPressed: () {},
+                    icon: Icon(Icons.notifications_outlined),
+                  ),
+                ],
+              ),
             ),
           ],
         ),
@@ -99,6 +111,7 @@ class CustomAppBar extends StatelessWidget {
             background: Container(
               margin: EdgeInsets.all(8.0),
               height: 100.0,
+              padding: EdgeInsets.all(8.0),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(19.0),
                 gradient: LinearGradient(
@@ -115,55 +128,71 @@ class CustomAppBar extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        "Safety score",
-                        style: Theme.of(context).textTheme.headlineLarge!
-                            .copyWith(color: Colors.white),
-                      ),
-                      Text(
-                        "${homeViewmodelProvider.accounts.length} Passwords",
-                        style: Theme.of(context).textTheme.headlineSmall!
-                            .copyWith(color: Colors.white),
-                      ),
-                    ],
-                  ),
-                  Stack(
-                    children: [
-                      ProgressIndicatorTheme(
-                        data: ProgressIndicatorThemeData(
-                          color: Colors.orange,
-                          strokeWidth: 14.0,
-                          circularTrackColor: Colors.white30,
-                          constraints: BoxConstraints(
-                            minHeight: 60.0,
-                            minWidth: 60.0,
-                          ),
-                        ),
-                        child: CircularProgressIndicator.adaptive(
-                          value: homeViewmodelProvider.accounts.length * 0.02,
-                        ),
-                      ),
-                      Positioned(
-                        top: 0,
-                        bottom: 0,
-                        left: 0,
-                        right: 0,
-                        child: Center(
-                          child: Text(
-                            "${homeViewmodelProvider.accounts.length * 2}%",
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.w800,
-                              fontSize: 18.0,
+                  Expanded(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Expanded(
+                          child: FittedBox(
+                            child: Text(
+                              AppLocalizations.of(context)!.safetyScore,
+                              style: Theme.of(context).textTheme.headlineLarge!
+                                  .copyWith(color: Colors.white),
                             ),
                           ),
                         ),
-                      ),
-                    ],
+                        Flexible(
+                          child: FittedBox(
+                            child: Text(
+                              AppLocalizations.of(context)!.totalPassword(
+                                homeViewmodelProvider.accounts.length,
+                              ),
+                              maxLines: 1,
+                              overflow: TextOverflow.fade,
+                              style: Theme.of(context).textTheme.headlineSmall!
+                                  .copyWith(color: Colors.white),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Flexible(
+                    child: Stack(
+                      children: [
+                        ProgressIndicatorTheme(
+                          data: ProgressIndicatorThemeData(
+                            color: Colors.orange,
+                            strokeWidth: 14.0,
+                            circularTrackColor: Colors.white30,
+                            constraints: BoxConstraints(
+                              minHeight: 60.0,
+                              minWidth: 60.0,
+                            ),
+                          ),
+                          child: CircularProgressIndicator.adaptive(
+                            value: homeViewmodelProvider.accounts.length * 0.02,
+                          ),
+                        ),
+                        Positioned(
+                          top: 0,
+                          bottom: 0,
+                          left: 0,
+                          right: 0,
+                          child: Center(
+                            child: Text(
+                              "${homeViewmodelProvider.accounts.length * 2}%",
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.w800,
+                                fontSize: 18.0,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ],
               ),
@@ -187,7 +216,7 @@ class CustomAppBar extends StatelessWidget {
             children: [
               SizedBox(width: 12.0),
               Text(
-                "Categories",
+                AppLocalizations.of(context)!.categories,
                 style: Theme.of(context).textTheme.headlineSmall,
               ),
             ],

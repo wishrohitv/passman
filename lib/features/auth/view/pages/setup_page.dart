@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:passman/core/widgets/custom_button.dart';
 import 'package:passman/features/auth/view/widgets/setup_pin_dialog.dart';
+import 'package:passman/l10n/app_localizations.dart';
 
 class SetupPage extends StatelessWidget {
   const SetupPage({super.key});
@@ -19,7 +20,7 @@ class SetupPage extends StatelessWidget {
               children: [Icon(Icons.vpn_lock_sharp, size: 70.0)],
             ),
             Text(
-              "PassMan",
+              AppLocalizations.of(context)!.appName,
               style: Theme.of(
                 context,
               ).textTheme.headlineLarge!.copyWith(fontWeight: FontWeight.bold),
@@ -53,7 +54,7 @@ class SetupPage extends StatelessWidget {
                                     controlAffinity:
                                         ListTileControlAffinity.leading,
                                     title: Text(
-                                      "Agree to the policy and terms",
+                                      AppLocalizations.of(context)!.acceptTerm,
                                     ),
                                   ),
                                   Spacer(),
@@ -70,7 +71,9 @@ class SetupPage extends StatelessWidget {
                                               ),
                                         );
                                       },
-                                      text: "Continue",
+                                      text: AppLocalizations.of(
+                                        context,
+                                      )!.continueBtn,
                                     ),
                                   ),
                                   SizedBox(height: 10.0),

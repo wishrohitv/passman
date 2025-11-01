@@ -5,21 +5,6 @@ class HomeLocalRepository {
   final Box _box = Hive.box(Constants.dbName);
   Iterable<dynamic> _acounts = [];
 
-  // HomeLocalRepository._(this._box);
-
-  // static Future<HomeLocalRepository> init() async {
-  //   final authLocalRepository = await AuthLocalRepository.init();
-  //   await Future.delayed(Duration(milliseconds: 1));
-  //   final box = await Hive.openBox(
-  //     Constants.dbName,
-  //     encryptionCipher: HiveAesCipher(
-  //       Utf8Encoder().convert(authLocalRepository.accountDbEncryptionKey!),
-  //     ),
-  //   );
-  //   final repo = HomeLocalRepository._(box);
-  //   repo._loadValue();
-  //   return repo;
-  // }
   HomeLocalRepository() {
     _loadValue();
   }

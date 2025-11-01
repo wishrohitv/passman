@@ -5,6 +5,7 @@ import 'package:passman/core/provider/settings_provider.dart';
 import 'package:passman/features/auth/viewmodel/auth_viewmodel.dart';
 import 'package:passman/features/home/view/widgets/custom_list_tile.dart';
 import 'package:passman/features/home/view/widgets/styled_field.dart';
+import 'package:passman/l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
 
 class AccountPage extends StatefulWidget {
@@ -96,7 +97,9 @@ class _AccountPageState extends State<AccountPage>
                                     return Column(
                                       children: [
                                         Text(
-                                          "Available avatars",
+                                          AppLocalizations.of(
+                                            context,
+                                          )!.availableAvatars,
                                           style: Theme.of(
                                             context,
                                           ).textTheme.headlineMedium,
@@ -168,7 +171,7 @@ class _AccountPageState extends State<AccountPage>
               // Name
               StyledField(
                 controller: _nameController,
-                hintText: "Enter your name",
+                hintText: AppLocalizations.of(context)!.enterYourName,
                 textAlign: TextAlign.center,
                 style: Theme.of(context).textTheme.headlineMedium!.copyWith(
                   fontWeight: FontWeight.bold,
@@ -182,9 +185,31 @@ class _AccountPageState extends State<AccountPage>
               // Setting
               CustomListTile(
                 leadingIcon: LucideIcons.lockKeyhole,
-                title: "Security",
-                subtitle: "Change password, self-destrution",
+                title: AppLocalizations.of(context)!.security,
+                subtitle: AppLocalizations.of(context)!.securitySubtitle,
                 onTap: () {},
+              ),
+              // Language
+              CustomListTile(
+                leadingIcon: LucideIcons.languages,
+                title: AppLocalizations.of(
+                  context,
+                )!.language(settingsProvider.appLanguage),
+                subtitle: AppLocalizations.of(context)!.languageSubtitle,
+                onTap: () {},
+                trailing: DropdownButton(
+                  items: AppLocalizations.supportedLocales
+                      .map(
+                        (locale) => DropdownMenuItem(
+                          value: locale,
+                          child: Text(locale.languageCode),
+                        ),
+                      )
+                      .toList(),
+                  onChanged: (locale) {
+                    authViewmoderProvider.addAppLanguage(locale!.languageCode);
+                  },
+                ),
               ),
               CustomListTile(
                 leadingIcon: LucideIcons.badgeInfo,

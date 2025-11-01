@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:hive_ce/hive.dart';
 import 'package:passman/core/config/constants.dart';
 import 'package:passman/core/provider/settings_provider.dart';
@@ -40,21 +42,17 @@ class AuthLocalRepository {
     return pw;
   }
 
-  // AuthLocalRepository._(this._box);
-
-  // /// Factory-style async initializer
-  // static Future<AuthLocalRepository> init() async {
-  //   final box = await Hive.openBox(
-  //     Constants.settingDbName,
-  //     encryptionCipher: HiveAesCipher(
-  //       utf8.encode(Constants.settingDbEncryptKey),
-  //     ),
-  //   );
-
-  //   final repo = AuthLocalRepository._(box);
-
-  //   return repo;
-  // }
+  String get appLanguage {
+    String? ln = _box.get("app_ln");
+    if (ln == null) {
+      // Return os's defult language
+      Locale deviceLocale = PlatformDispatcher.instance.locale;
+      String languageCode = deviceLocale.languageCode;
+      return languageCode;
+    } else {
+      return ln;
+    }
+  }
 
   // ---- Updaters ----
   Future<void> addUserName(String value) async {
@@ -79,5 +77,9 @@ class AuthLocalRepository {
 
   Future<void> addPwEncryptionKey(String value) async {
     await _box.put("pwEncryptionKey", value);
+  }
+
+  Future<void> addAppLanguage(String ln) async {
+    await _box.put("app_ln", ln);
   }
 }
