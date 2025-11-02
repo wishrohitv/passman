@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lucide_icons_flutter/lucide_icons.dart';
 import 'package:passman/core/config/constants.dart';
+import 'package:passman/core/enum/language_enum.dart';
 import 'package:passman/core/provider/settings_provider.dart';
 import 'package:passman/features/auth/viewmodel/auth_viewmodel.dart';
 import 'package:passman/features/home/view/widgets/custom_list_tile.dart';
@@ -194,15 +195,19 @@ class _AccountPageState extends State<AccountPage>
                 leadingIcon: LucideIcons.languages,
                 title: AppLocalizations.of(
                   context,
-                )!.language(settingsProvider.appLanguage),
+                )!.language,
                 subtitle: AppLocalizations.of(context)!.languageSubtitle,
                 onTap: () {},
                 trailing: DropdownButton(
-                  items: AppLocalizations.supportedLocales
+                  value: settingsProvider.appLanguage,
+                  items: LanguageEnum.values
                       .map(
-                        (locale) => DropdownMenuItem(
-                          value: locale,
-                          child: Text(locale.languageCode),
+                        (langModel) => DropdownMenuItem(
+                          enabled: langModel.name != "bho",
+                          value: langModel.appLangModel.locale,
+                          child: Text(
+                            "${langModel.appLangModel.flag} ${langModel.appLangModel.langName}",
+                          ),
                         ),
                       )
                       .toList(),

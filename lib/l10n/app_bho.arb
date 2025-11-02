@@ -61,14 +61,9 @@
     "@securitySubtitle": {
         "description": "सुरक्षा फीचर के विवरण"
     },
-    "language": "भाषा {selectedLanguage}",
+    "language": "भाषा",
     "@language": {
-        "description": "भाषा वाला बटन",
-        "placeholders": {
-            "selectedLanguage": {
-                "type": "String"
-            }
-        }
+        "description": "भाषा वाला बटन"
     },
     "languageSubtitle": "भाषा बदलीं",
     "@languageSubtitle": {

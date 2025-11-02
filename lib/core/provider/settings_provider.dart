@@ -7,7 +7,7 @@ class SettingsProvider extends ChangeNotifier {
   SettingsProvider._internal();
 
   String userName = "";
-  String appLanguage = "en";
+  Locale appLanguage = Locale("en");
   String userSelectedAvatar = Constants.avalaibleAvatars.first;
   String? appPassword;
   EncryptionTypeEnum selectedEncryptionAlgorithm = EncryptionTypeEnum.aes256cbc;
@@ -46,7 +46,7 @@ class SettingsProvider extends ChangeNotifier {
   }
 
   set setAppLanguage(String ln) {
-    appLanguage = ln;
+    appLanguage = Locale(ln);
   }
 
   factory SettingsProvider() {

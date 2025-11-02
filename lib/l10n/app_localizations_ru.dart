@@ -53,9 +53,7 @@ class AppLocalizationsRu extends AppLocalizations {
   String get securitySubtitle => 'Сменить пароль, самоуничтожение';
 
   @override
-  String language(String selectedLanguage) {
-    return 'Язык $selectedLanguage';
-  }
+  String get language => 'Язык';
 
   @override
   String get languageSubtitle => 'Сменить язык';

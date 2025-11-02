@@ -53,9 +53,7 @@ class AppLocalizationsEs extends AppLocalizations {
   String get securitySubtitle => 'Cambiar contraseña, autodestrucción';
 
   @override
-  String language(String selectedLanguage) {
-    return 'Idioma $selectedLanguage';
-  }
+  String get language => 'Idioma';
 
   @override
   String get languageSubtitle => 'Cambiar idioma';

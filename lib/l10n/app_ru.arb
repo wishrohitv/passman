@@ -61,14 +61,9 @@
   "@securitySubtitle": {
     "description": "Описание функций безопасности"
   },
-  "language": "Язык {selectedLanguage}",
+  "language": "Язык",
   "@language": {
-    "description": "Заголовок кнопки выбора языка",
-    "placeholders": {
-      "selectedLanguage": {
-        "type": "String"
-      }
-    }
+    "description": "Заголовок кнопки выбора языка"
   },
   "languageSubtitle": "Сменить язык",
   "@languageSubtitle": {

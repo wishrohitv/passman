@@ -61,14 +61,9 @@
     "@securitySubtitle": {
         "description": "安全选项说明"
     },
-    "language": "语言 {selectedLanguage}",
+    "language": "语言",
     "@language": {
-        "description": "语言按钮标题",
-        "placeholders": {
-            "selectedLanguage": {
-                "type": "String"
-            }
-        }
+        "description": "语言按钮标题"
     },
     "languageSubtitle": "更改语言",
     "@languageSubtitle": {

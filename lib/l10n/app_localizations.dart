@@ -193,8 +193,8 @@ abstract class AppLocalizations {
   /// Langauge button tile
   ///
   /// In en, this message translates to:
-  /// **'Language {selectedLanguage}'**
-  String language(String selectedLanguage);
+  /// **'Language'**
+  String get language;
 
   /// Subtitle text for language
   ///

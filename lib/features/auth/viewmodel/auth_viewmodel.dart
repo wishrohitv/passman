@@ -24,7 +24,7 @@ class AuthViewmodel extends ChangeNotifier {
         _authLocalRepository.encryptionAlgorithm,
       )
       ..pwEncrypitionKey = _authLocalRepository.pwEncryptionKey
-      ..appLanguage = _authLocalRepository.appLanguage;
+      ..setAppLanguage = _authLocalRepository.appLanguage;
     notifyListeners();
   }
 
@@ -67,7 +67,7 @@ class AuthViewmodel extends ChangeNotifier {
 
   Future<void> addAppLanguage(String ln) async {
     await _authLocalRepository.addAppLanguage(ln);
-    _settingsProvider.appLanguage = ln;
+    _settingsProvider.setAppLanguage = ln;
     notifyListeners();
   }
 }

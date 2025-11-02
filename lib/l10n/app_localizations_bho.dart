@@ -53,9 +53,7 @@ class AppLocalizationsBho extends AppLocalizations {
   String get securitySubtitle => 'पासवर्ड बदलीं, खुद नष्ट होखल';
 
   @override
-  String language(String selectedLanguage) {
-    return 'भाषा $selectedLanguage';
-  }
+  String get language => 'भाषा';
 
   @override
   String get languageSubtitle => 'भाषा बदलीं';

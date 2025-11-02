@@ -53,9 +53,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get securitySubtitle => '修改密码，自毁选项';
 
   @override
-  String language(String selectedLanguage) {
-    return '语言 $selectedLanguage';
-  }
+  String get language => '语言';
 
   @override
   String get languageSubtitle => '更改语言';

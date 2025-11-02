@@ -61,14 +61,9 @@
   "@securitySubtitle": {
     "description": "Helper text for describe seturity button features"
   },
-  "language": "Language {selectedLanguage}",
+  "language": "Language",
   "@language": {
-    "description": "Langauge button tile",
-    "placeholders": {
-      "selectedLanguage": {
-        "type": "String"
-      }
-    }
+    "description": "Langauge button tile"
   },
   "languageSubtitle": "Change Languages",
   "@languageSubtitle": {

@@ -46,30 +46,22 @@ void main() async {
   );
 }
 
-class PassManagerApp extends StatefulWidget {
+class PassManagerApp extends StatelessWidget {
   const PassManagerApp({super.key});
 
   @override
-  State<PassManagerApp> createState() => _PassManagerAppState();
-}
-
-class _PassManagerAppState extends State<PassManagerApp> {
-  Map<String, Locale> avl = {
-    "bho": Locale('bho'),
-    "en": Locale('en'),
-    "es": Locale('es'),
-    "hi": Locale('hi'),
-    "ru": Locale('ru'),
-    "zh": Locale('zh'),
-  };
-
-  @override
   Widget build(BuildContext context) {
+    final authViewmodelProvider = Provider.of<AuthViewmodel>(
+      context,
+      listen: false,
+    );
     final settingsProvider = Provider.of<SettingsProvider>(
       context,
       listen: true,
     );
+
     return MaterialApp(
+      key: ValueKey(settingsProvider.appLanguage),
       debugShowCheckedModeBanner: false,
       builder: BotToastInit(),
       navigatorObservers: [BotToastNavigatorObserver()],
@@ -77,7 +69,7 @@ class _PassManagerAppState extends State<PassManagerApp> {
       localeResolutionCallback: (locale, supportedLocales) {
         return locale;
       },
-      locale: avl[settingsProvider.appLanguage],
+      locale: settingsProvider.appLanguage,
 
       localizationsDelegates: [
         AppLocalizations.delegate,
@@ -86,27 +78,15 @@ class _PassManagerAppState extends State<PassManagerApp> {
         GlobalWidgetsLocalizations.delegate,
       ],
 
-      home: FutureBuilder(
-        future: _isUser(context),
-        builder: (context, snapshot) {
-          if (snapshot.connectionState == ConnectionState.waiting) {
-            return Scaffold(body: Center(child: CircularProgressIndicator()));
-          } else if (snapshot.hasData || snapshot.data != null) {
-            return snapshot.data! ? VerifyPinPage() : SetupPage();
-          } else {
-            return Text("Something went wrong in the app");
-          }
-        },
-      ),
+      home: buildLayout(authViewmodelProvider.appPassword),
     );
   }
 
-  Future<bool> _isUser(BuildContext context) async {
-    final authViewmodelProvider = AuthViewmodel();
-    if (authViewmodelProvider.appPassword != null) {
-      return true;
+  Widget buildLayout(String? pw) {
+    if (pw == null) {
+      return SetupPage();
     } else {
-      return false;
+      return VerifyPinPage();
     }
   }
 }
