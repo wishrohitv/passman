@@ -1,5 +1,9 @@
 # PassMan - Secure Password Manager
 
+<p align="center">
+    <img width="200" src="assets/logo/passmanlogo.png" alt="PassMan Logo">
+</p>
+
 PassMan is a secure, offline password manager that helps you store and manage sensitive information locally on your device.
 
 ## Features
@@ -10,6 +14,7 @@ PassMan is a secure, offline password manager that helps you store and manage se
 - User-friendly, responsive UI
 - Offline-only storage (no cloud syncing)
 - Option to export/import encrypted backups
+- Password generator
 
 ## Security
 
