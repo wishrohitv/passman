@@ -33,53 +33,56 @@ class SetupPage extends StatelessWidget {
               ),
               onPressed: () {
                 showModalBottomSheet(
+                  useSafeArea: true,
                   context: context,
                   builder: (context) => BottomSheet(
                     onClosing: () {},
                     builder: (context) {
                       bool isChecked = false;
-                      return SizedBox(
-                        height: 200.0,
-                        child: Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: StatefulBuilder(
-                            builder: (context, setState) {
-                              return Column(
-                                children: [
-                                  CheckboxListTile(
-                                    value: isChecked,
-                                    onChanged: (value) {
-                                      setState(() => isChecked = value!);
-                                    },
-                                    controlAffinity:
-                                        ListTileControlAffinity.leading,
-                                    title: Text(
-                                      AppLocalizations.of(context)!.acceptTerm,
-                                    ),
-                                  ),
-                                  Spacer(),
-                                  Opacity(
-                                    opacity: isChecked ? 1 : 0.3,
-                                    child: CustomButton(
-                                      onPressed: () {
-                                        Navigator.pop(context);
-                                        showDialog(
-                                          context: context,
-                                          builder: (context) =>
-                                              Dialog.fullscreen(
-                                                child: SetupPinDialog(),
-                                              ),
-                                        );
+                      return SafeArea(
+                        child: SizedBox(
+                          height: 200.0,
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: StatefulBuilder(
+                              builder: (context, setState) {
+                                return Column(
+                                  children: [
+                                    CheckboxListTile(
+                                      value: isChecked,
+                                      onChanged: (value) {
+                                        setState(() => isChecked = value!);
                                       },
-                                      text: AppLocalizations.of(
-                                        context,
-                                      )!.continueBtn,
+                                      controlAffinity:
+                                          ListTileControlAffinity.leading,
+                                      title: Text(
+                                        AppLocalizations.of(context)!.acceptTerm,
+                                      ),
                                     ),
-                                  ),
-                                  SizedBox(height: 10.0),
-                                ],
-                              );
-                            },
+                                    Spacer(),
+                                    Opacity(
+                                      opacity: isChecked ? 1 : 0.3,
+                                      child: CustomButton(
+                                        onPressed: () {
+                                          Navigator.pop(context);
+                                          showDialog(
+                                            context: context,
+                                            builder: (context) =>
+                                                Dialog.fullscreen(
+                                                  child: SetupPinDialog(),
+                                                ),
+                                          );
+                                        },
+                                        text: AppLocalizations.of(
+                                          context,
+                                        )!.continueBtn,
+                                      ),
+                                    ),
+                                    SizedBox(height: 10.0),
+                                  ],
+                                );
+                              },
+                            ),
                           ),
                         ),
                       );

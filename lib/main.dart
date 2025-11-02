@@ -53,7 +53,7 @@ class PassManagerApp extends StatelessWidget {
   Widget build(BuildContext context) {
     final authViewmodelProvider = Provider.of<AuthViewmodel>(
       context,
-      listen: false,
+      listen: true,
     );
     final settingsProvider = Provider.of<SettingsProvider>(
       context,
