@@ -25,6 +25,19 @@ Built using:
 - MVVM (Model-View-ViewModel) architecture
 - Custom encryption components (plus optional use of the crypto package)
 
+## Multilanguage (Localization) Support
+
+PassMan includes multilanguage support to improve accessibility for users worldwide.
+
+Supported languages:
+- 🇬🇧 English (default)
+- 🇮🇳 Hindi
+- 🇷🇺 Russian
+- 🇪🇸 Spanish
+- 🇨🇳 Chinese
+- 🇮🇳 Bhojpuri (under development)
+
+
 ## Getting Started
 
 1. Clone the repository
