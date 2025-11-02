@@ -41,6 +41,7 @@ class _DatepickerFieldState extends State<DatepickerField> {
         SizedBox(
           width: 60.0,
           child: StyledField(
+            keyboardType: TextInputType.number,
             controller: _yearTextController,
             textInputAction: TextInputAction.next,
             hintText: "0000",

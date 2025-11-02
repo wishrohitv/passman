@@ -2,6 +2,14 @@ import 'package:flutter/material.dart';
 
 ThemeData lightTheme = ThemeData(
   primaryColor: Colors.orange,
+  checkboxTheme: CheckboxThemeData(
+    fillColor: MaterialStateProperty.resolveWith<Color>((states) {
+      if (states.contains(MaterialState.selected)) {
+        return Colors.orange;
+      }
+      return Colors.grey;
+    }),
+  ),
   switchTheme: SwitchThemeData(
     thumbColor: MaterialStateProperty.resolveWith<Color>((states) {
       if (states.contains(MaterialState.selected)) {

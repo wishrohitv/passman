@@ -43,6 +43,7 @@ class CustomField extends StatelessWidget {
           focusNode: focusNode,
           maxLength: maxLength,
           style: textStyle,
+          textAlignVertical: TextAlignVertical.center,
           decoration: InputDecoration(
             labelText: helperText,
             suffixIcon: suffixEye != null

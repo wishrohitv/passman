@@ -326,6 +326,7 @@ class _AddAccountSheetState extends State<AddAccountSheet>
                                           SizedBox(
                                             width: 40.0,
                                             child: StyledField(
+                                              keyboardType: TextInputType.number,
                                               maxLength: 3,
                                               controller: _cvvPinController,
                                               hintText: "000",
