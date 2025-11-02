@@ -10,7 +10,12 @@ class AuthLocalRepository {
   final Box _box = Hive.box(Constants.settingDbName);
 
   String? get userName => _box.get("userName");
-  String get selectedAvatar => _box.get("selectedAvatar");
+  String get selectedAvatar {
+    String? path = _box.get("selectedAvatar");
+    path ??= Constants.avalaibleAvatars.first;
+    return path;
+  }
+
   String? get appPassword {
     return _box.get("appPassword");
   }
