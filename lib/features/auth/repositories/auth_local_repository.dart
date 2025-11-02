@@ -4,6 +4,7 @@ import 'package:hive_ce/hive.dart';
 import 'package:passman/core/config/constants.dart';
 import 'package:passman/core/provider/settings_provider.dart';
 import 'package:passman/core/utils/gen_random_text.dart';
+import 'package:passman/l10n/app_localizations.dart';
 
 class AuthLocalRepository {
   final Box _box = Hive.box(Constants.settingDbName);
@@ -48,7 +49,12 @@ class AuthLocalRepository {
       // Return os's defult language
       Locale deviceLocale = PlatformDispatcher.instance.locale;
       String languageCode = deviceLocale.languageCode;
-      return languageCode;
+      for (var locale in AppLocalizations.supportedLocales) {
+        if (locale.languageCode == languageCode) {
+          return languageCode;
+        }
+      }
+      return "en";
     } else {
       return ln;
     }

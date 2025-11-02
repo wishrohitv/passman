@@ -14,11 +14,27 @@
   },
   "verifyItsYou": "Подтвердите, что это вы",
   "@verifyItsYou": {
-    "description": "Проверка личности пользователя"
+    "description": "Проверка — это вы"
   },
-  "incorrectPinMsg": "Неверный PIN. Попробуйте снова.",
+  "incorrectPinMsg": "Неверный PIN. Пожалуйста, попробуйте снова.",
   "@incorrectPinMsg": {
-    "description": "Предупреждение о неверном PIN"
+    "description": "Предупреждение о неправильном PIN"
+  },
+  "enterYourNameOpt": "Введите ваше имя (необязательно)",
+  "@enterYourNameOpt": {
+    "description": "Подсказка для текстового поля"
+  },
+  "enterSuperPin": "Введите супер-PIN",
+  "@enterSuperPin": {
+    "description": "Супер-PIN для приложения"
+  },
+  "onlyPinYouNeedToRemember": "Единственный PIN, который вам нужно запомнить",
+  "@onlyPinYouNeedToRemember": {
+    "description": ""
+  },
+  "confirmYourPin": "Подтвердите супер-PIN",
+  "@confirmYourPin": {
+    "description": "Подтверждение супер-PIN"
   },
   "greetings": "С возвращением",
   "@greetings": {
@@ -26,15 +42,15 @@
   },
   "yourName": "Ваше имя",
   "@yourName": {
-    "description": "Поле для имени пользователя"
+    "description": "Заполнитель для имени пользователя"
   },
   "safetyScore": "Оценка безопасности",
   "@safetyScore": {
-    "description": "Показатель надежности паролей"
+    "description": "Бенчмарк безопасности паролей"
   },
-  "totalPassword": "{value} паролей",
+  "totalPassword": "{value} Паролей",
   "@totalPassword": {
-    "description": "Всего паролей, сохраненных пользователем",
+    "description": "Всего паролей, сохранённых пользователем",
     "placeholders": {
       "value": {
         "type": "int"
@@ -47,26 +63,116 @@
   },
   "availableAvatars": "Доступные аватары",
   "@availableAvatars": {
-    "description": "Список доступных аватаров"
+    "description": "Доступные аватары"
   },
   "enterYourName": "Введите ваше имя",
   "@enterYourName": {
-    "description": "Подсказка для поля ввода имени"
+    "description": "Подсказка для текстового поля"
   },
+  "recentlyAdded": "Недавно добавлено",
+  "@recentlyAdded": {
+    "description": "Недавно добавленные"
+  },
+  "card": "Карта",
+  "@card": {},
+  "cards": "Карты",
+  "@cards": {},
+  "login": "Войти",
+  "@login": {},
+  "addAccounts": "Добавить аккаунты",
+  "@addAccounts": {},
+  "accountType": "Тип аккаунта",
+  "@accountType": {},
+  "siteNameHelperText": "Название сайта (например: Google, Facebook)",
+  "@siteNameHelperText": {},
+  "emailUserNameNumberHelperText": "Эл. почта или имя пользователя или номер",
+  "@emailUserNameNumberHelperText": {},
+  "password": "Пароль",
+  "@password": {
+    "description": "Пароль от сайта"
+  },
+  "bankName": "Название банка",
+  "@bankName": {
+    "description": "Название банка карты"
+  },
+  "holderName": "Имя держателя",
+  "@holderName": {
+    "description": "Имя держателя карты"
+  },
+  "expireOn": "Действителен до",
+  "@expireOn": {
+    "description": "Срок действия карты"
+  },
+  "greenPin": "Зелёный PIN",
+  "@greenPin": {
+    "description": "Зелёный PIN"
+  },
+  "addSuccessfully": "Успешно добавлено",
+  "@addSuccessfully": {
+    "description": "Сообщение об успехе"
+  },
+  "somethingWentWrong": "Что-то пошло не так",
+  "@somethingWentWrong": {
+    "description": "Сообщение об ошибке"
+  },
+  "add": "Добавить",
+  "@add": {
+    "description": "кнопка добавить"
+  },
+  "delete": "Удалить",
+  "@delete": {
+    "description": "кнопка удалить"
+  },
+  "cancel": "Отмена",
+  "@cancel": {
+    "description": "кнопка отмены"
+  },
+  "all": "Все",
+  "@all": {
+    "description": "кнопка все"
+  },
+  "error": "Ошибка",
+  "@error": {
+    "description": "Ошибка"
+  },
+  "deleteWarning": "Это действие нельзя отменить",
+  "@deleteWarning": {
+    "description": "Предупреждение при удалении"
+  },
+  "writeNoteHelperText": "Напишите заметку",
+  "@writeNoteHelperText": {
+    "description": "Подсказка для записи заметки"
+  },
+  "pwEncrptionAlgorithm": "Алгоритм шифрования пароля",
+  "@pwEncrptionAlgorithm": {
+    "description": ""
+  },
+  "pwEncryptionAlgorithmSubtitle": "Изменение алгоритма шифрования не повлияет на существующие пароли. Однако новые пароли будут зашифрованы с использованием выбранного алгоритма.",
+  "@pwEncryptionAlgorithmSubtitle": {},
+  "pwGenerator": "Генератор паролей",
+  "@pwGenerator": {
+    "description": "Заголовок генератора паролей"
+  },
+  "includeNumbers": "Включить цифры",
+  "@includeNumbers": {},
+  "includeSymbols": "Включить символы",
+  "@includeSymbols": {},
+  "copied": "Скопировано",
+  "@copied": {},
   "security": "Безопасность",
   "@security": {
     "description": "Безопасность"
   },
-  "securitySubtitle": "Сменить пароль, самоуничтожение",
+  "securitySubtitle": "Изменить пароль, функция самоуничтожения",
   "@securitySubtitle": {
-    "description": "Описание функций безопасности"
+    "description": "Пояснительный текст для функции безопасности"
   },
   "language": "Язык",
   "@language": {
-    "description": "Заголовок кнопки выбора языка"
+    "description": "Заголовок кнопки языка"
   },
-  "languageSubtitle": "Сменить язык",
+  "languageSubtitle": "Изменить язык",
   "@languageSubtitle": {
-    "description": "Подзаголовок для изменения языка"
+    "description": "Подзаголовок кнопки языка"
   }
 }

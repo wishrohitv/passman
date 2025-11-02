@@ -1,6 +1,6 @@
 {
     "@@locale": "hi",
-    "appName": "पासमैन",
+    "appName": "PassMan",
     "@appName": {
         "description": "ऐप का नाम"
     },
@@ -12,25 +12,41 @@
     "@continueBtn": {
         "description": "जारी रखें बटन पर क्लिक करें"
     },
-    "verifyItsYou": "सत्यापित करें कि यह आप हैं",
+    "verifyItsYou": "सत्यापित करें कि आप ही हैं",
     "@verifyItsYou": {
-        "description": "आपकी पहचान की पुष्टि करें"
+        "description": "सत्यापित करें कि यह आप हैं"
     },
-    "incorrectPinMsg": "गलत पिन। कृपया पुनः प्रयास करें।",
+    "incorrectPinMsg": "गलत PIN। कृपया पुनः प्रयास करें।",
     "@incorrectPinMsg": {
-        "description": "गलत पिन चेतावनी"
+        "description": "PIN गलत चेतावनी"
+    },
+    "enterYourNameOpt": "अपना नाम दर्ज करें (वैकल्पिक)",
+    "@enterYourNameOpt": {
+        "description": "टेक्स्टफ़ील्ड के लिए प्लेसहोल्डर"
+    },
+    "enterSuperPin": "सुपर PIN दर्ज करें",
+    "@enterSuperPin": {
+        "description": "ऐप के लिए सुपर PIN"
+    },
+    "onlyPinYouNeedToRemember": "केवल वही PIN जो आपको याद रखना है",
+    "@onlyPinYouNeedToRemember": {
+        "description": ""
+    },
+    "confirmYourPin": "सुपर PIN की पुष्टि करें",
+    "@confirmYourPin": {
+        "description": "सुपर PIN की पुष्टि"
     },
     "greetings": "वापसी पर स्वागत है",
     "@greetings": {
-        "description": "उपयोगकर्ता का स्वागत संदेश"
+        "description": "उपयोगकर्ताओं के लिए स्वागत संदेश"
     },
     "yourName": "आपका नाम",
     "@yourName": {
-        "description": "उपयोगकर्ता के नाम का स्थान"
+        "description": "उपयोगकर्ता नाम के लिए प्लेसहोल्डर"
     },
     "safetyScore": "सुरक्षा स्कोर",
     "@safetyScore": {
-        "description": "पासवर्ड की सुरक्षा स्तर"
+        "description": "पासवर्ड सुरक्षा स्कोर का मापदंड"
     },
     "totalPassword": "{value} पासवर्ड",
     "@totalPassword": {
@@ -43,7 +59,7 @@
     },
     "categories": "श्रेणियाँ",
     "@categories": {
-        "description": "खातों और कार्डों की श्रेणियाँ"
+        "description": "खातों और कार्ड्स की श्रेणियाँ"
     },
     "availableAvatars": "उपलब्ध अवतार",
     "@availableAvatars": {
@@ -51,22 +67,112 @@
     },
     "enterYourName": "अपना नाम दर्ज करें",
     "@enterYourName": {
-        "description": "नाम दर्ज करने का संकेत"
+        "description": "टेक्स्टफ़ील्ड के लिए सुझाव"
     },
+    "recentlyAdded": "हाल ही में जोड़ा गया",
+    "@recentlyAdded": {
+        "description": "हाल ही में जोड़ा गया"
+    },
+    "card": "कार्ड",
+    "@card": {},
+    "cards": "कार्ड्स",
+    "@cards": {},
+    "login": "लॉगिन",
+    "@login": {},
+    "addAccounts": "खाते जोड़ें",
+    "@addAccounts": {},
+    "accountType": "खाता प्रकार",
+    "@accountType": {},
+    "siteNameHelperText": "साइट का नाम (उदा. Google, Facebook)",
+    "@siteNameHelperText": {},
+    "emailUserNameNumberHelperText": "ईमेल या उपयोगकर्ता नाम या नंबर",
+    "@emailUserNameNumberHelperText": {},
+    "password": "पासवर्ड",
+    "@password": {
+        "description": "साइट का पासवर्ड"
+    },
+    "bankName": "बैंक का नाम",
+    "@bankName": {
+        "description": "कार्ड वाले बैंक का नाम"
+    },
+    "holderName": "होल्डर का नाम",
+    "@holderName": {
+        "description": "कार्ड होल्डर का नाम"
+    },
+    "expireOn": "समाप्ति तारीख",
+    "@expireOn": {
+        "description": "कार्ड की समाप्ति तारीख"
+    },
+    "greenPin": "ग्रीन PIN",
+    "@greenPin": {
+        "description": "ग्रीन PIN"
+    },
+    "addSuccessfully": "सफलतापूर्वक जोड़ा गया",
+    "@addSuccessfully": {
+        "description": "सफलता संदेश"
+    },
+    "somethingWentWrong": "कुछ गलत हो गया",
+    "@somethingWentWrong": {
+        "description": "त्रुटि संदेश"
+    },
+    "add": "जोड़ें",
+    "@add": {
+        "description": "जोड़ने का बटन"
+    },
+    "delete": "हटाएं",
+    "@delete": {
+        "description": "हटाने का बटन"
+    },
+    "cancel": "रद्द करें",
+    "@cancel": {
+        "description": "रद्द करने का बटन"
+    },
+    "all": "सभी",
+    "@all": {
+        "description": "सभी बटन"
+    },
+    "error": "त्रुटि",
+    "@error": {
+        "description": "त्रुटि"
+    },
+    "deleteWarning": "इस क्रिया को पूर्ववत नहीं किया जा सकता",
+    "@deleteWarning": {
+        "description": "हटाने की चेतावनी"
+    },
+    "writeNoteHelperText": "नोट लिखें",
+    "@writeNoteHelperText": {
+        "description": "नोट लिखने के सुझाव टेक्स्ट"
+    },
+    "pwEncrptionAlgorithm": "पासवर्ड एन्क्रिप्शन एल्गोरिथम",
+    "@pwEncrptionAlgorithm": {
+        "description": ""
+    },
+    "pwEncryptionAlgorithmSubtitle": "एन्क्रिप्शन एल्गोरिथम बदलने से आपके मौजूदा पासवर्ड प्रभावित नहीं होंगे। हालांकि, नए पासवर्ड चयनित एल्गोरिथम के साथ एन्क्रिप्ट होंगे।",
+    "@pwEncryptionAlgorithmSubtitle": {},
+    "pwGenerator": "पासवर्ड जनरेटर",
+    "@pwGenerator": {
+        "description": "पासवर्ड जनरेटर शीर्षक"
+    },
+    "includeNumbers": "संख्याएं शामिल करें",
+    "@includeNumbers": {},
+    "includeSymbols": "प्रतीक शामिल करें",
+    "@includeSymbols": {},
+    "copied": "कॉपी किया गया",
+    "@copied": {},
     "security": "सुरक्षा",
     "@security": {
         "description": "सुरक्षा"
     },
-    "securitySubtitle": "पासवर्ड बदलें, स्वयं-विनाश",
+    "securitySubtitle": "पासवर्ड बदलें, आत्म-विनाश",
     "@securitySubtitle": {
-        "description": "सुरक्षा विकल्पों का विवरण"
+        "description": "सुरक्षा बटन सुविधाओं का वर्णन करने वाला हेल्प टेक्स्ट"
     },
     "language": "भाषा",
     "@language": {
         "description": "भाषा बटन शीर्षक"
     },
-    "languageSubtitle": "भाषा बदलें",
+    "languageSubtitle": "भाषाएँ बदलें",
     "@languageSubtitle": {
-        "description": "भाषा परिवर्तन उपशीर्षक"
+        "description": "भाषा बदलने के लिए उपशीर्षक"
     }
 }

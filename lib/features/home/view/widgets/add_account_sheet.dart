@@ -7,6 +7,7 @@ import 'package:passman/features/home/view/widgets/card_number_field.dart';
 import 'package:passman/features/home/view/widgets/datepicker_field.dart';
 import 'package:passman/features/home/view/widgets/styled_field.dart';
 import 'package:passman/features/home/viewmodel/home_viewmodel.dart';
+import 'package:passman/l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
 import 'package:unixtime/unixtime.dart';
 import 'package:lucide_icons_flutter/lucide_icons.dart';
@@ -75,6 +76,7 @@ class _AddAccountSheetState extends State<AddAccountSheet>
 
   @override
   Widget build(BuildContext context) {
+    final localization = AppLocalizations.of(context)!;
     return BottomSheet(
       constraints: BoxConstraints(maxHeight: 520.0, minHeight: 400.0),
       animationController: _animationController,
@@ -85,7 +87,7 @@ class _AddAccountSheetState extends State<AddAccountSheet>
           children: [
             SizedBox(height: 8.0),
             Text(
-              "Add Accounts",
+              localization.addAccounts,
               style: Theme.of(
                 context,
               ).textTheme.titleLarge!.copyWith(fontWeight: FontWeight.bold),
@@ -96,13 +98,13 @@ class _AddAccountSheetState extends State<AddAccountSheet>
                 Tab(
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [Icon(LucideIcons.logIn300), Text("Login")],
+                    children: [Icon(LucideIcons.logIn300), Text(localization.login,)],
                   ),
                 ),
                 Tab(
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [Icon(LucideIcons.creditCard), Text("Card")],
+                    children: [Icon(LucideIcons.creditCard), Text(localization.card)],
                   ),
                 ),
               ],
@@ -123,7 +125,7 @@ class _AddAccountSheetState extends State<AddAccountSheet>
                             textInputAction: TextInputAction.next,
                             width: double.maxFinite,
                             leadingIcon: Icon(accountIconData),
-                            label: Text("Account type"),
+                            label: Text(localization.accountType),
                             onSelected: (value) {
                               setState(() {
                                 accountIconData = value!;
@@ -149,7 +151,7 @@ class _AddAccountSheetState extends State<AddAccountSheet>
                                   controller: _siteNameTextController,
                                   textInputAction: TextInputAction.next,
                                   helperText:
-                                      "Site name (eg. Google, Facebook)",
+                                      localization.siteNameHelperText,
                                 ),
                               ),
                               IconButton(
@@ -223,12 +225,12 @@ class _AddAccountSheetState extends State<AddAccountSheet>
                           CustomField(
                             textInputAction: TextInputAction.next,
                             controller: _emailController,
-                            helperText: "Email or Username or Number",
+                            helperText: localization.emailUserNameNumberHelperText,
                           ),
                           CustomField(
                             textInputAction: TextInputAction.next,
                             controller: _passordController,
-                            helperText: "Password",
+                            helperText: localization.password,
                             suffixEye: true,
                             obscure: true,
                           ),
@@ -237,7 +239,7 @@ class _AddAccountSheetState extends State<AddAccountSheet>
                             child: CustomFieldMultiline(
                               textInputAction: TextInputAction.next,
                               controller: _noteController,
-                              helperText: "Write notes",
+                              helperText: localization.writeNoteHelperText,
                             ),
                           ),
                         ],
@@ -271,7 +273,7 @@ class _AddAccountSheetState extends State<AddAccountSheet>
                               children: [
                                 SizedBox(height: 8.0),
                                 StyledField(
-                                  hintText: "Bank name",
+                                  hintText: localization.bankName,
                                   textCapitalization:
                                       TextCapitalization.characters,
                                   controller: _bankNameController,
@@ -279,7 +281,7 @@ class _AddAccountSheetState extends State<AddAccountSheet>
                                   focusNode: _focusNode[0],
                                 ),
                                 StyledField(
-                                  hintText: "Holder name",
+                                  hintText: localization.holderName,
                                   controller: _holderNameController,
                                   textCapitalization:
                                       TextCapitalization.characters,
@@ -292,7 +294,6 @@ class _AddAccountSheetState extends State<AddAccountSheet>
                                       : 70.0,
                                 ),
                                 // Card number field
-                                // TODO: Fix spacing
                                 CardNumberField(
                                   inputFieldLength: 4,
 
@@ -341,7 +342,7 @@ class _AddAccountSheetState extends State<AddAccountSheet>
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
-                              Text("Green Pin"),
+                              Text(localization.greenPin),
                               SizedBox(
                                 width: 140.0,
                                 child: CustomField(
@@ -360,7 +361,7 @@ class _AddAccountSheetState extends State<AddAccountSheet>
                             child: CustomFieldMultiline(
                               textInputAction: TextInputAction.next,
                               controller: _cardNoteController,
-                              helperText: "Write notes",
+                              helperText: localization.writeNoteHelperText,
                             ),
                           ),
                         ],
@@ -380,13 +381,13 @@ class _AddAccountSheetState extends State<AddAccountSheet>
                   } else if (_tabController.index == 1) {
                     addCard(randomID);
                   }
-                  showNotification("Added successfully");
+                  showNotification(localization.addSuccessfully);
                 } on Exception catch (_) {
-                  showToast("Something went wrong");
+                  showToast(localization.somethingWentWrong);
                 }
                 Navigator.pop(context);
               },
-              text: "Add",
+              text: localization.add,
             ),
             SizedBox(height: 8.0),
           ],

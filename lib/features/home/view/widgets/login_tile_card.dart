@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:lucide_icons_flutter/lucide_icons.dart';
+import 'package:passman/core/enum/encryption_type_enum.dart';
 import 'package:passman/core/themes/theme_colors.dart';
 import 'package:passman/core/utils/loader.dart';
 import 'package:passman/features/home/enum/account_category_enum.dart';
 import 'package:passman/features/home/models/account_model.dart';
 import 'package:passman/features/home/viewmodel/home_viewmodel.dart';
+import 'package:passman/l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
 
 class LoginTileCard extends StatelessWidget {
@@ -18,6 +20,7 @@ class LoginTileCard extends StatelessWidget {
       context,
       listen: false,
     );
+    final localization = AppLocalizations.of(context)!;
     return Container(
       height: 80.0,
       padding: EdgeInsets.symmetric(horizontal: 14.0),
@@ -30,12 +33,12 @@ class LoginTileCard extends StatelessWidget {
           showDialog(
             context: context,
             builder: (context) => AlertDialog(
-              title: Text("Delete"),
-              content: Text("This action can't be undone"),
+              title: Text(localization.delete),
+              content: Text(localization.deleteWarning),
               actions: [
                 TextButton(
                   onPressed: () => Navigator.pop(context),
-                  child: Text("Cancel"),
+                  child: Text(localization.cancel),
                 ),
                 TextButton(
                   onPressed: () {
@@ -43,7 +46,7 @@ class LoginTileCard extends StatelessWidget {
 
                     Navigator.pop(context);
                   },
-                  child: Text("Delete", style: TextStyle(color: Colors.red)),
+                  child: Text(localization.delete, style: TextStyle(color: Colors.red)),
                 ),
               ],
             ),
@@ -87,6 +90,9 @@ class LoginTileCard extends StatelessWidget {
                         text:
                             (await homeViewmodelProvider.decryptData(
                               accountModel.password,
+                              EncryptionTypeEnum.values.byName(
+                                accountModel.encryptionAlgorithm,
+                              ),
                             )) ??
                             "",
                       ),
@@ -101,7 +107,7 @@ class LoginTileCard extends StatelessWidget {
                             LucideIcons.check,
                             color: Colors.lightGreenAccent,
                           ),
-                          Text("Coppied"),
+                          Text(localization.copied),
                         ],
                       ),
                     );

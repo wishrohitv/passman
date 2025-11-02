@@ -51,7 +51,8 @@ class AuthViewmodel extends ChangeNotifier {
 
   Future<void> addEncryptionAlgorithm(String value) async {
     await _authLocalRepository.addEncryptionAlgorithm(value);
-
+    _settingsProvider.selectedEncryptionAlgorithm = EncryptionTypeEnum.values
+        .byName(_authLocalRepository.encryptionAlgorithm);
     notifyListeners();
   }
 

@@ -3,6 +3,7 @@ import 'package:lucide_icons_flutter/lucide_icons.dart';
 import 'package:passman/features/home/view/pages/account_page.dart';
 import 'package:passman/features/home/view/pages/encryption_settings_page.dart';
 import 'package:passman/features/home/view/pages/home_page.dart';
+import 'package:passman/features/home/view/pages/password_generator_page.dart';
 import 'package:passman/features/home/view/widgets/add_account_sheet.dart';
 import 'package:passman/features/home/view/widgets/bottom_icon.dart';
 
@@ -17,7 +18,7 @@ class _BottomNavBarPageState extends State<BottomNavBarPage> {
   List<Widget> pages = [
     HomePage(),
     EncryptionSettingsPage(),
-    Container(),
+    PasswordGeneratorPage(),
     AccountPage(),
   ];
   int currentIndex = 0;
@@ -50,7 +51,7 @@ class _BottomNavBarPageState extends State<BottomNavBarPage> {
             SizedBox(width: 60.0),
             BottomIcon(
               onPressed: () => changeBottomTabScreen(2),
-              icon: LucideIcons.shieldCheck,
+              icon: LucideIcons.hash,
               isCheckd: currentIndex == 2,
             ),
             BottomIcon(

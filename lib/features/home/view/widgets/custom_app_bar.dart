@@ -225,13 +225,22 @@ class CustomAppBar extends StatelessWidget {
             controller: tabController,
             tabs: [
               Tab(
-                child: TabButton(icon: LucideIcons.grid2x2, text: "All"),
+                child: TabButton(
+                  icon: LucideIcons.grid2x2,
+                  text: AppLocalizations.of(context)!.all,
+                ),
               ),
               Tab(
-                child: TabButton(icon: LucideIcons.logIn, text: "Login"),
+                child: TabButton(
+                  icon: LucideIcons.logIn,
+                  text: AppLocalizations.of(context)!.login,
+                ),
               ),
               Tab(
-                child: TabButton(icon: LucideIcons.creditCard, text: "Cards"),
+                child: TabButton(
+                  icon: LucideIcons.creditCard,
+                  text: AppLocalizations.of(context)!.cards,
+                ),
               ),
             ],
           ),

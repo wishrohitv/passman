@@ -10,31 +10,47 @@
     },
     "continueBtn": "Continuar",
     "@continueBtn": {
-        "description": "Haz clic en el botón continuar"
+        "description": "Haga clic en el botón continuar"
     },
     "verifyItsYou": "Verifica que eres tú",
     "@verifyItsYou": {
-        "description": "Verificación de identidad"
+        "description": "Verifica que eres tú"
     },
-    "incorrectPinMsg": "PIN incorrecto. Inténtalo de nuevo.",
+    "incorrectPinMsg": "PIN incorrecto. Por favor, inténtalo de nuevo.",
     "@incorrectPinMsg": {
-        "description": "Advertencia de PIN incorrecto"
+        "description": "Aviso de PIN incorrecto"
+    },
+    "enterYourNameOpt": "Introduce tu nombre (Opcional)",
+    "@enterYourNameOpt": {
+        "description": "Valor de marcador de posición para el campo de texto"
+    },
+    "enterSuperPin": "Introduce el Super PIN",
+    "@enterSuperPin": {
+        "description": "Super PIN para la aplicación"
+    },
+    "onlyPinYouNeedToRemember": "El único PIN que necesitas recordar",
+    "@onlyPinYouNeedToRemember": {
+        "description": ""
+    },
+    "confirmYourPin": "Confirma el Super PIN",
+    "@confirmYourPin": {
+        "description": "Confirmación del Super PIN"
     },
     "greetings": "Bienvenido de nuevo",
     "@greetings": {
-        "description": "Mensaje de bienvenida para el usuario"
+        "description": "Mensaje de saludo para usuarios"
     },
     "yourName": "Tu nombre",
     "@yourName": {
-        "description": "Campo para el nombre del usuario"
+        "description": "Marcador de posición para el nombre de usuario"
     },
-    "safetyScore": "Puntaje de seguridad",
+    "safetyScore": "Puntuación de seguridad",
     "@safetyScore": {
-        "description": "Nivel de seguridad de las contraseñas"
+        "description": "Puntuación de seguridad para contraseñas"
     },
     "totalPassword": "{value} Contraseñas",
     "@totalPassword": {
-        "description": "Total de contraseñas guardadas por el usuario",
+        "description": "Total de contraseñas almacenadas por el usuario",
         "placeholders": {
             "value": {
                 "type": "int"
@@ -51,15 +67,105 @@
     },
     "enterYourName": "Introduce tu nombre",
     "@enterYourName": {
-        "description": "Texto de sugerencia para el campo de nombre"
+        "description": "Texto de sugerencia para el campo de texto"
     },
+    "recentlyAdded": "Añadido recientemente",
+    "@recentlyAdded": {
+        "description": "Añadido recientemente"
+    },
+    "card": "Tarjeta",
+    "@card": {},
+    "cards": "Tarjetas",
+    "@cards": {},
+    "login": "Iniciar sesión",
+    "@login": {},
+    "addAccounts": "Añadir cuentas",
+    "@addAccounts": {},
+    "accountType": "Tipo de cuenta",
+    "@accountType": {},
+    "siteNameHelperText": "Nombre del sitio (por ejemplo: Google, Facebook)",
+    "@siteNameHelperText": {},
+    "emailUserNameNumberHelperText": "Correo electrónico o nombre de usuario o número",
+    "@emailUserNameNumberHelperText": {},
+    "password": "Contraseña",
+    "@password": {
+        "description": "Contraseña del sitio"
+    },
+    "bankName": "Nombre del banco",
+    "@bankName": {
+        "description": "Nombre del banco de la tarjeta"
+    },
+    "holderName": "Nombre del titular",
+    "@holderName": {
+        "description": "Nombre del titular de la tarjeta"
+    },
+    "expireOn": "Caduca en",
+    "@expireOn": {
+        "description": "Fecha de vencimiento de la tarjeta"
+    },
+    "greenPin": "PIN verde",
+    "@greenPin": {
+        "description": "PIN verde"
+    },
+    "addSuccessfully": "Añadido con éxito",
+    "@addSuccessfully": {
+        "description": "Mensaje de éxito"
+    },
+    "somethingWentWrong": "Algo salió mal",
+    "@somethingWentWrong": {
+        "description": "Mensaje de error"
+    },
+    "add": "Añadir",
+    "@add": {
+        "description": "botón añadir"
+    },
+    "delete": "Eliminar",
+    "@delete": {
+        "description": "botón eliminar"
+    },
+    "cancel": "Cancelar",
+    "@cancel": {
+        "description": "botón cancelar"
+    },
+    "all": "Todo",
+    "@all": {
+        "description": "botón todo"
+    },
+    "error": "Error",
+    "@error": {
+        "description": "Error"
+    },
+    "deleteWarning": "Esta acción no se puede deshacer",
+    "@deleteWarning": {
+        "description": "Advertencia de eliminación"
+    },
+    "writeNoteHelperText": "Escribe notas",
+    "@writeNoteHelperText": {
+        "description": "Texto de ayuda para escribir nota"
+    },
+    "pwEncrptionAlgorithm": "Algoritmo de encriptación de contraseña",
+    "@pwEncrptionAlgorithm": {
+        "description": ""
+    },
+    "pwEncryptionAlgorithmSubtitle": "Al cambiar el algoritmo de encriptación, tus contraseñas existentes no se verán afectadas. Sin embargo, las nuevas contraseñas serán encriptadas usando el algoritmo seleccionado.",
+    "@pwEncryptionAlgorithmSubtitle": {},
+    "pwGenerator": "Generador de contraseñas",
+    "@pwGenerator": {
+        "description": "Título del generador de contraseñas"
+    },
+    "includeNumbers": "Incluir números",
+    "@includeNumbers": {},
+    "includeSymbols": "Incluir símbolos",
+    "@includeSymbols": {},
+    "copied": "Copiado",
+    "@copied": {},
     "security": "Seguridad",
     "@security": {
         "description": "Seguridad"
     },
     "securitySubtitle": "Cambiar contraseña, autodestrucción",
     "@securitySubtitle": {
-        "description": "Descripción de las opciones de seguridad"
+        "description": "Texto de ayuda para describir funciones de seguridad"
     },
     "language": "Idioma",
     "@language": {
@@ -67,6 +173,6 @@
     },
     "languageSubtitle": "Cambiar idioma",
     "@languageSubtitle": {
-        "description": "Subtítulo de cambio de idioma"
+        "description": "Texto secundario para cambiar idioma"
     }
 }

@@ -1,72 +1,178 @@
 {
     "@@locale": "bho",
-    "appName": "पासमैन",
+    "appName": "PassMan",
     "@appName": {
-        "description": "ऐप के नाव"
+        "description": "एप के नाम"
     },
-    "acceptTerm": "नीति आ सर्त मान लीं",
+    "acceptTerm": "नीति आ शर्त से सहमत होखीं",
     "@acceptTerm": {
-        "description": "ऐप के नीति आ सर्त"
+        "description": "एप के नीति आ शर्त"
     },
     "continueBtn": "आगे बढ़ीं",
     "@continueBtn": {
-        "description": "आगे बढ़े वाला बटन दबाईं"
+        "description": "Continue बटन पर दबाईं"
     },
-    "verifyItsYou": "पक्का करीं कि रउआ ही बानी",
+    "verifyItsYou": "देखीं, ई आप ही बानीं",
     "@verifyItsYou": {
-        "description": "पहचान पक्का करीं"
+        "description": "ई आप बानीं के सत्यापन"
     },
-    "incorrectPinMsg": "गलत पिन। फेर से कोशिश करीं।",
+    "incorrectPinMsg": "गलत PIN। फेर कोशिश करीं।",
     "@incorrectPinMsg": {
-        "description": "गलत पिन के चेतावनी"
+        "description": "PIN गलत होखे के चेतावनी"
+    },
+    "enterYourNameOpt": "आपन नाम दर्ज करीं (वैकल्पिक)",
+    "@enterYourNameOpt": {
+        "description": "टेक्स्टफील्ड खातिर प्लेसहोल्डर"
+    },
+    "enterSuperPin": "सुपर PIN दर्ज करीं",
+    "@enterSuperPin": {
+        "description": "एप खातिर सुपर PIN"
+    },
+    "onlyPinYouNeedToRemember": "ओह PIN के छोड़ के कुछू याद ना रखे के चाहीं",
+    "@onlyPinYouNeedToRemember": {
+        "description": ""
+    },
+    "confirmYourPin": "सुपर PIN के पुष्टि करीं",
+    "@confirmYourPin": {
+        "description": "सुपर PIN के पुष्टि"
     },
     "greetings": "फेर से स्वागत बा",
     "@greetings": {
-        "description": "उपयोगकर्ता स्वागत संदेश"
+        "description": "यूज़र खातिर अभिवादन संदेश"
     },
-    "yourName": "रउआ के नाव",
+    "yourName": "रउआ नाम",
     "@yourName": {
-        "description": "नाव लिखे के जगह"
+        "description": "यूज़र नाम खातिर प्लेसहोल्डर"
     },
     "safetyScore": "सुरक्षा स्कोर",
     "@safetyScore": {
-        "description": "पासवर्ड के सुरक्षा माप"
+        "description": "पासवर्ड सुरक्षा स्कोर के माप"
     },
     "totalPassword": "{value} पासवर्ड",
     "@totalPassword": {
-        "description": "कुल पासवर्ड जवन सहेजाइल बा",
+        "description": "यूज़र द्वारा सहेजल कुल पासवर्ड",
         "placeholders": {
             "value": {
                 "type": "int"
             }
         }
     },
-    "categories": "श्रेणी",
+    "categories": "श्रेणियाँ",
     "@categories": {
-        "description": "खाता आ कार्ड के श्रेणी"
+        "description": "खातन आ कार्डन के श्रेणियाँ"
     },
     "availableAvatars": "उपलब्ध अवतार",
     "@availableAvatars": {
         "description": "उपलब्ध अवतार"
     },
-    "enterYourName": "अपना नाव लिखीं",
+    "enterYourName": "आपन नाम दर्ज करीं",
     "@enterYourName": {
-        "description": "नाव लिखे के संकेत"
+        "description": "टेक्स्टफील्ड खातिर सुझाव"
     },
+    "recentlyAdded": "हालहि में जोडल गइल",
+    "@recentlyAdded": {
+        "description": "हाल में जोडल गइल"
+    },
+    "card": "कार्ड",
+    "@card": {},
+    "cards": "कार्ड",
+    "@cards": {},
+    "login": "लॉगिन",
+    "@login": {},
+    "addAccounts": "खाता जोड़ल जाव",
+    "@addAccounts": {},
+    "accountType": "खाता के प्रकार",
+    "@accountType": {},
+    "siteNameHelperText": "साइट के नाम (जइसे: Google, Facebook)",
+    "@siteNameHelperText": {},
+    "emailUserNameNumberHelperText": "ईमेल या यूज़रनेम या नंबर",
+    "@emailUserNameNumberHelperText": {},
+    "password": "पासवर्ड",
+    "@password": {
+        "description": "साइट के पासवर्ड"
+    },
+    "bankName": "बैंक के नाम",
+    "@bankName": {
+        "description": "कार्ड वाला बैंक के नाम"
+    },
+    "holderName": "होल्डर के नाम",
+    "@holderName": {
+        "description": "कार्ड होल्डर के नाम"
+    },
+    "expireOn": "समाप्त होई",
+    "@expireOn": {
+        "description": "कार्ड के समाप्ति तिथि"
+    },
+    "greenPin": "हरा PIN",
+    "@greenPin": {
+        "description": "हरा PIN"
+    },
+    "addSuccessfully": "सफलता से जोड़ल गइल",
+    "@addSuccessfully": {
+        "description": "सफलता संदेश"
+    },
+    "somethingWentWrong": "कुछु गड़बड़ हो गइल",
+    "@somethingWentWrong": {
+        "description": "त्रुटि संदेश"
+    },
+    "add": "जोड़ल जाव",
+    "@add": {
+        "description": "जोड़ने के बटन"
+    },
+    "delete": "हटावल जाव",
+    "@delete": {
+        "description": "हटावे के बटन"
+    },
+    "cancel": "रद्द करीं",
+    "@cancel": {
+        "description": "रद्द करे के बटन"
+    },
+    "all": "सब",
+    "@all": {
+        "description": "सब बटन"
+    },
+    "error": "गलती",
+    "@error": {
+        "description": "त्रुटि"
+    },
+    "deleteWarning": "ई कार्रवाई वापस ना हो सकेला",
+    "@deleteWarning": {
+        "description": "हटावे के चेतावनी"
+    },
+    "writeNoteHelperText": "नोट लिखीं",
+    "@writeNoteHelperText": {
+        "description": "नोट लिखे खातिर सुझाव टेक्स्ट"
+    },
+    "pwEncrptionAlgorithm": "पासवर्ड एन्क्रिप्शन एल्गोरिथम",
+    "@pwEncrptionAlgorithm": {
+        "description": ""
+    },
+    "pwEncryptionAlgorithmSubtitle": "एन्क्रिप्शन एल्गोरिथम बदले से अबहीं वाला पासवर्ड प्रभावित ना होई। बाकिर, नया पासवर्ड चुने गइल एल्गोरिथम से एन्क्रिप्ट होइहें।",
+    "@pwEncryptionAlgorithmSubtitle": {},
+    "pwGenerator": "पासवर्ड जनरेटर",
+    "@pwGenerator": {
+        "description": "पासवर्ड जनरेटर शीर्षक"
+    },
+    "includeNumbers": "नंबर शामिल करीं",
+    "@includeNumbers": {},
+    "includeSymbols": "चिन्ह शामिल करीं",
+    "@includeSymbols": {},
+    "copied": "कॉपी भइल",
+    "@copied": {},
     "security": "सुरक्षा",
     "@security": {
         "description": "सुरक्षा"
     },
-    "securitySubtitle": "पासवर्ड बदलीं, खुद नष्ट होखल",
+    "securitySubtitle": "पासवर्ड बदलीं, आत्म-विनाश",
     "@securitySubtitle": {
-        "description": "सुरक्षा फीचर के विवरण"
+        "description": "सुरक्षा बटन के सुविधा के बारे में हेल्प टेक्स्ट"
     },
     "language": "भाषा",
     "@language": {
-        "description": "भाषा वाला बटन"
+        "description": "भाषा बटन शीर्षक"
     },
-    "languageSubtitle": "भाषा बदलीं",
+    "languageSubtitle": "भाषा बदलल जाव",
     "@languageSubtitle": {
-        "description": "भाषा बदलल के उपशीर्षक"
+        "description": "भाषा बदलने के लिए उपशीर्षक"
     }
 }

@@ -4,6 +4,7 @@ import 'package:passman/features/auth/viewmodel/auth_viewmodel.dart';
 import 'package:passman/features/home/view/pages/bottom_nav_bar_page.dart';
 import 'package:passman/features/home/view/widgets/custom_field.dart';
 import 'package:passman/features/auth/view/widgets/custom_pin_field.dart';
+import 'package:passman/l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
 
 class SetupPinDialog extends StatefulWidget {
@@ -39,7 +40,7 @@ class _SetupPinDialogState extends State<SetupPinDialog> {
             spacing: 12.0,
             children: [
               SizedBox(height: 60.0),
-              Text("Enter Name"),
+              Text("Enter your Name"),
               SizedBox(
                 width: MediaQuery.of(context).size.width * 0.80,
                 child: CustomField(
@@ -106,7 +107,7 @@ class _SetupPinDialogState extends State<SetupPinDialog> {
                     MaterialPageRoute(builder: (context) => BottomNavBarPage()),
                   );
                 },
-                text: "Continue",
+                text: AppLocalizations.of(context)!.continueBtn,
               ),
             ],
           ),

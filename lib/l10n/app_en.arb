@@ -20,6 +20,22 @@
   "@incorrectPinMsg": {
     "description": "Incorrect pin warning"
   },
+  "enterYourNameOpt": "Enter your name (Optional)",
+  "@enterYourNameOpt": {
+    "description": "Placeholder value for textfied"
+  },
+  "enterSuperPin": "Enter Super PIN",
+  "@enterSuperPin": {
+    "description": "Super pin for app"
+  },
+  "onlyPinYouNeedToRemember": "Only pin you need to remember",
+  "@onlyPinYouNeedToRemember": {
+    "description": ""
+  },
+  "confirmYourPin": "Confirm Super PIN",
+  "@confirmYourPin": {
+    "description": "Confirm Super PIN"
+  },
   "greetings": "Welecome back",
   "@greetings": {
     "description": "Greeting message for users"
@@ -53,6 +69,96 @@
   "@enterYourName": {
     "description": "Hint text for text field"
   },
+  "recentlyAdded": "Recently Added",
+  "@recentlyAdded": {
+    "description": "Recently Added"
+  },
+  "card": "Card",
+  "@card": {},
+  "cards": "Cards",
+  "@cards": {},
+  "login": "Login",
+  "@login": {},
+  "addAccounts": "Add Accounts",
+  "@addAccounts": {},
+  "accountType": "Account type",
+  "@accountType": {},
+  "siteNameHelperText": "Site name (eg. Google, Facebook)",
+  "@siteNameHelperText": {},
+  "emailUserNameNumberHelperText": "Email or Username or Number",
+  "@emailUserNameNumberHelperText": {},
+  "password": "Password",
+  "@password": {
+    "description": "Password of site"
+  },
+  "bankName": "Bank name",
+  "@bankName": {
+    "description": "Bank name of card"
+  },
+  "holderName": "Holder name",
+  "@holderName": {
+    "description": "Holder name of card"
+  },
+  "expireOn": "Expire on",
+  "@expireOn": {
+    "description": "Expiry of  card"
+  },
+  "greenPin": "Green pin",
+  "@greenPin": {
+    "description": "Green pin"
+  },
+  "addSuccessfully": "Added successfully",
+  "@addSuccessfully": {
+    "description": "Success message"
+  },
+  "somethingWentWrong": "Something went wrong",
+  "@somethingWentWrong": {
+    "description": "error message"
+  },
+  "add": "Add",
+  "@add": {
+    "description": "add btn"
+  },
+  "delete": "Delete",
+  "@delete": {
+    "description": "delete btn"
+  },
+  "cancel": "Cancel",
+  "@cancel": {
+    "description": "delete btn"
+  },
+  "all": "All",
+  "@all": {
+    "description": "all btn"
+  },
+  "error": "Error",
+  "@error": {
+    "description": "Error"
+  },
+  "deleteWarning": "This action can't be undone",
+  "@deleteWarning": {
+    "description": "all btn"
+  },
+  "writeNoteHelperText": "Write notes",
+  "@writeNoteHelperText": {
+    "description": "Write note helper text"
+  },
+  "pwEncrptionAlgorithm": "Password encrpytion algorithm",
+  "@pwEncrptionAlgorithm": {
+    "description": ""
+  },
+  "pwEncryptionAlgorithmSubtitle": "By changing the encryption algorithm, your exisiting passwords will not be affected. However, new passwords will be encrypted using the selected algorithm.",
+  "@pwEncryptionAlgorithmSubtitle": {},
+  "pwGenerator": "Password Generator",
+  "@pwGenerator": {
+    "description": "Password generator title"
+  },
+  "includeNumbers": "Include Numbers",
+  "@includeNumbers": {},
+  "includeSymbols": "Include Symbols",
+  "@includeSymbols": {},
+  "copied": "Copied",
+  "@copied": {},
   "security": "Security",
   "@security": {
     "description": "Security "

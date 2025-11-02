@@ -1,9 +1,26 @@
 import 'package:flutter/material.dart';
 
 ThemeData lightTheme = ThemeData(
+  primaryColor: Colors.orange,
+  switchTheme: SwitchThemeData(
+    thumbColor: MaterialStateProperty.resolveWith<Color>((states) {
+      if (states.contains(MaterialState.selected)) {
+        return Colors.orange;
+      }
+      return Colors.grey;
+    }),
+    trackColor: MaterialStateProperty.resolveWith<Color>((states) {
+      if (states.contains(MaterialState.selected)) {
+        return Colors.orange.withOpacity(0.5);
+      }
+      return Colors.grey.withOpacity(0.5);
+    }),
+  ),
   iconButtonTheme: IconButtonThemeData(
     style: ButtonStyle(
-      backgroundColor: WidgetStatePropertyAll(const Color.fromARGB(255, 237, 222, 200)),
+      backgroundColor: WidgetStatePropertyAll(
+        const Color.fromARGB(255, 237, 222, 200),
+      ),
       iconColor: WidgetStatePropertyAll(Colors.orange),
     ),
   ),
@@ -26,11 +43,11 @@ ThemeData lightTheme = ThemeData(
     border: OutlineInputBorder(borderRadius: BorderRadius.circular(12.0)),
     enabledBorder: OutlineInputBorder(
       borderRadius: BorderRadius.circular(12.0),
-      borderSide: BorderSide(color: const Color.fromARGB(255, 243, 188, 206))
+      borderSide: BorderSide(color: const Color.fromARGB(255, 243, 188, 206)),
     ),
     focusedBorder: OutlineInputBorder(
       borderRadius: BorderRadius.circular(12.0),
-      borderSide: BorderSide(color: const Color.fromARGB(255, 253, 213, 93))
+      borderSide: BorderSide(color: const Color.fromARGB(255, 253, 213, 93)),
     ),
   ),
 );

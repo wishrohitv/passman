@@ -2,10 +2,12 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:passman/core/enum/encryption_type_enum.dart';
 import 'package:passman/core/utils/loader.dart';
 import 'package:passman/core/widgets/circular_loader.dart';
 import 'package:passman/features/home/models/card_model.dart';
 import 'package:passman/features/home/viewmodel/home_viewmodel.dart';
+import 'package:passman/l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
 
 class CardPreview extends StatefulWidget {
@@ -24,17 +26,18 @@ class _CardPreviewState extends State<CardPreview> {
       context,
       listen: false,
     );
+    final localization = AppLocalizations.of(context)!;
     return InkWell(
       onLongPress: () {
         showDialog(
           context: context,
           builder: (context) => AlertDialog(
-            title: Text("Delete"),
-            content: Text("This action can't be undone"),
+            title: Text(localization.delete),
+            content: Text(localization.deleteWarning),
             actions: [
               TextButton(
                 onPressed: () => Navigator.pop(context),
-                child: Text("Cancel"),
+                child: Text(localization.cancel),
               ),
               TextButton(
                 onPressed: () {
@@ -42,7 +45,10 @@ class _CardPreviewState extends State<CardPreview> {
 
                   Navigator.pop(context);
                 },
-                child: Text("Delete", style: TextStyle(color: Colors.red)),
+                child: Text(
+                  localization.delete,
+                  style: TextStyle(color: Colors.red),
+                ),
               ),
             ],
           ),
@@ -92,6 +98,9 @@ class _CardPreviewState extends State<CardPreview> {
                       child: FutureBuilder(
                         future: homeViewmodelProvider.decryptData(
                           widget.cardModel.cardNumber,
+                          EncryptionTypeEnum.values.byName(
+                            widget.cardModel.encryptionAlgorithm,
+                          ),
                         ),
                         builder: (context, snapshot) {
                           if (snapshot.connectionState ==
@@ -118,7 +127,7 @@ class _CardPreviewState extends State<CardPreview> {
                               );
                             } else {
                               return Text(
-                                "Error",
+                                localization.error,
                                 style: Theme.of(context).textTheme.titleMedium!
                                     .copyWith(
                                       fontWeight: FontWeight.w400,
@@ -136,6 +145,9 @@ class _CardPreviewState extends State<CardPreview> {
                         FutureBuilder(
                           future: homeViewmodelProvider.decryptData(
                             widget.cardModel.expiryDate,
+                            EncryptionTypeEnum.values.byName(
+                              widget.cardModel.encryptionAlgorithm,
+                            ),
                           ),
                           builder: (context, snapshot) {
                             if (snapshot.connectionState ==
@@ -145,14 +157,14 @@ class _CardPreviewState extends State<CardPreview> {
                               if (snapshot.hasData && snapshot.data != null) {
                                 final asList = jsonDecode(snapshot.data!);
                                 return Text(
-                                  "Expire ${obscureBuilder(asList[1].toString())}/${obscureBuilder(asList.first.toString())}",
+                                  "${localization.expireOn} ${obscureBuilder(asList[1].toString())}/${obscureBuilder(asList.first.toString())}",
                                   style: Theme.of(context)
                                       .textTheme
                                       .titleMedium!
                                       .copyWith(fontWeight: FontWeight.w400),
                                 );
                               } else {
-                                return Text("Error");
+                                return Text(localization.error);
                               }
                             }
                           },
@@ -160,6 +172,9 @@ class _CardPreviewState extends State<CardPreview> {
                         FutureBuilder(
                           future: homeViewmodelProvider.decryptData(
                             widget.cardModel.cvvPin,
+                            EncryptionTypeEnum.values.byName(
+                              widget.cardModel.encryptionAlgorithm,
+                            ),
                           ),
                           builder: (context, snapshot) {
                             if (snapshot.connectionState ==
@@ -183,7 +198,7 @@ class _CardPreviewState extends State<CardPreview> {
                                   ],
                                 );
                               } else {
-                                return Text("Error");
+                                return Text(localization.error);
                               }
                             }
                           },
@@ -196,10 +211,13 @@ class _CardPreviewState extends State<CardPreview> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Text("Green pin"),
+                  Text(localization.greenPin),
                   FutureBuilder(
                     future: homeViewmodelProvider.decryptData(
                       widget.cardModel.greenPin,
+                      EncryptionTypeEnum.values.byName(
+                        widget.cardModel.encryptionAlgorithm,
+                      ),
                     ),
                     builder: (context, snapshot) {
                       if (snapshot.connectionState == ConnectionState.waiting) {
@@ -214,7 +232,7 @@ class _CardPreviewState extends State<CardPreview> {
                             ],
                           );
                         } else {
-                          return Text("Error");
+                          return Text(localization.error);
                         }
                       }
                     },
@@ -268,7 +286,10 @@ class _CardPreviewState extends State<CardPreview> {
           context,
           widget: Column(
             mainAxisSize: MainAxisSize.min,
-            children: [Icon(Icons.check), Text("Coppied")],
+            children: [
+              Icon(Icons.check),
+              Text(AppLocalizations.of(context)!.copied),
+            ],
           ),
         );
       },

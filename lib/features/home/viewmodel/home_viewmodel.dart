@@ -1,10 +1,12 @@
 import 'package:flutter/widgets.dart';
+import 'package:passman/core/enum/encryption_type_enum.dart';
 import 'package:passman/core/provider/settings_provider.dart';
 import 'package:passman/features/home/repositories/home_encryption_repository.dart';
 import 'package:passman/features/home/repositories/home_local_repository.dart';
 
 class HomeViewmodel extends ChangeNotifier {
   final HomeLocalRepository _homeLocalRepository = HomeLocalRepository();
+  final SettingsProvider _settingsProvider = SettingsProvider();
   final HomeEncryptionRepository _homeEncryptionRepository =
       HomeEncryptionRepository();
 
@@ -52,11 +54,11 @@ class HomeViewmodel extends ChangeNotifier {
     return ecData;
   }
 
-  Future<String?> decryptData(String data) async {
+  Future<String?> decryptData(String data, EncryptionTypeEnum ecType) async {
     final ecData = await _homeEncryptionRepository.decryptData(
-      encryptionType: SettingsProvider().selectedEncryptionAlgorithm,
+      encryptionType: ecType,
       encryptedText: data,
-      secretKey: SettingsProvider().pwEncrypitionKey,
+      secretKey: _settingsProvider.pwEncrypitionKey,
     );
     return ecData;
   }

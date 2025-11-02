@@ -136,6 +136,30 @@ abstract class AppLocalizations {
   /// **'Incorrect PIN. Please try again.'**
   String get incorrectPinMsg;
 
+  /// Placeholder value for textfied
+  ///
+  /// In en, this message translates to:
+  /// **'Enter your name (Optional)'**
+  String get enterYourNameOpt;
+
+  /// Super pin for app
+  ///
+  /// In en, this message translates to:
+  /// **'Enter Super PIN'**
+  String get enterSuperPin;
+
+  ///
+  ///
+  /// In en, this message translates to:
+  /// **'Only pin you need to remember'**
+  String get onlyPinYouNeedToRemember;
+
+  /// Confirm Super PIN
+  ///
+  /// In en, this message translates to:
+  /// **'Confirm Super PIN'**
+  String get confirmYourPin;
+
   /// Greeting message for users
   ///
   /// In en, this message translates to:
@@ -177,6 +201,174 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Enter your name'**
   String get enterYourName;
+
+  /// Recently Added
+  ///
+  /// In en, this message translates to:
+  /// **'Recently Added'**
+  String get recentlyAdded;
+
+  /// No description provided for @card.
+  ///
+  /// In en, this message translates to:
+  /// **'Card'**
+  String get card;
+
+  /// No description provided for @cards.
+  ///
+  /// In en, this message translates to:
+  /// **'Cards'**
+  String get cards;
+
+  /// No description provided for @login.
+  ///
+  /// In en, this message translates to:
+  /// **'Login'**
+  String get login;
+
+  /// No description provided for @addAccounts.
+  ///
+  /// In en, this message translates to:
+  /// **'Add Accounts'**
+  String get addAccounts;
+
+  /// No description provided for @accountType.
+  ///
+  /// In en, this message translates to:
+  /// **'Account type'**
+  String get accountType;
+
+  /// No description provided for @siteNameHelperText.
+  ///
+  /// In en, this message translates to:
+  /// **'Site name (eg. Google, Facebook)'**
+  String get siteNameHelperText;
+
+  /// No description provided for @emailUserNameNumberHelperText.
+  ///
+  /// In en, this message translates to:
+  /// **'Email or Username or Number'**
+  String get emailUserNameNumberHelperText;
+
+  /// Password of site
+  ///
+  /// In en, this message translates to:
+  /// **'Password'**
+  String get password;
+
+  /// Bank name of card
+  ///
+  /// In en, this message translates to:
+  /// **'Bank name'**
+  String get bankName;
+
+  /// Holder name of card
+  ///
+  /// In en, this message translates to:
+  /// **'Holder name'**
+  String get holderName;
+
+  /// Expiry of  card
+  ///
+  /// In en, this message translates to:
+  /// **'Expire on'**
+  String get expireOn;
+
+  /// Green pin
+  ///
+  /// In en, this message translates to:
+  /// **'Green pin'**
+  String get greenPin;
+
+  /// Success message
+  ///
+  /// In en, this message translates to:
+  /// **'Added successfully'**
+  String get addSuccessfully;
+
+  /// error message
+  ///
+  /// In en, this message translates to:
+  /// **'Something went wrong'**
+  String get somethingWentWrong;
+
+  /// add btn
+  ///
+  /// In en, this message translates to:
+  /// **'Add'**
+  String get add;
+
+  /// delete btn
+  ///
+  /// In en, this message translates to:
+  /// **'Delete'**
+  String get delete;
+
+  /// delete btn
+  ///
+  /// In en, this message translates to:
+  /// **'Cancel'**
+  String get cancel;
+
+  /// all btn
+  ///
+  /// In en, this message translates to:
+  /// **'All'**
+  String get all;
+
+  /// Error
+  ///
+  /// In en, this message translates to:
+  /// **'Error'**
+  String get error;
+
+  /// all btn
+  ///
+  /// In en, this message translates to:
+  /// **'This action can\'t be undone'**
+  String get deleteWarning;
+
+  /// Write note helper text
+  ///
+  /// In en, this message translates to:
+  /// **'Write notes'**
+  String get writeNoteHelperText;
+
+  ///
+  ///
+  /// In en, this message translates to:
+  /// **'Password encrpytion algorithm'**
+  String get pwEncrptionAlgorithm;
+
+  /// No description provided for @pwEncryptionAlgorithmSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'By changing the encryption algorithm, your exisiting passwords will not be affected. However, new passwords will be encrypted using the selected algorithm.'**
+  String get pwEncryptionAlgorithmSubtitle;
+
+  /// Password generator title
+  ///
+  /// In en, this message translates to:
+  /// **'Password Generator'**
+  String get pwGenerator;
+
+  /// No description provided for @includeNumbers.
+  ///
+  /// In en, this message translates to:
+  /// **'Include Numbers'**
+  String get includeNumbers;
+
+  /// No description provided for @includeSymbols.
+  ///
+  /// In en, this message translates to:
+  /// **'Include Symbols'**
+  String get includeSymbols;
+
+  /// No description provided for @copied.
+  ///
+  /// In en, this message translates to:
+  /// **'Copied'**
+  String get copied;
 
   /// Security
   ///

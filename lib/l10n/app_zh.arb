@@ -1,12 +1,12 @@
 {
     "@@locale": "zh",
-    "appName": "密码管家",
+    "appName": "PassMan",
     "@appName": {
-        "description": "应用名称"
+        "description": "应用程序名称"
     },
-    "acceptTerm": "同意隐私政策和条款",
+    "acceptTerm": "同意政策和条款",
     "@acceptTerm": {
-        "description": "应用隐私政策与条款"
+        "description": "应用的政策和条款"
     },
     "continueBtn": "继续",
     "@continueBtn": {
@@ -16,25 +16,41 @@
     "@verifyItsYou": {
         "description": "验证是您本人"
     },
-    "incorrectPinMsg": "PIN码错误。请再试一次。",
+    "incorrectPinMsg": "PIN码不正确。请再试一次。",
     "@incorrectPinMsg": {
-        "description": "错误PIN提示"
+        "description": "PIN码错误警告"
+    },
+    "enterYourNameOpt": "输入您的名字（可选）",
+    "@enterYourNameOpt": {
+        "description": "文本字段的占位值"
+    },
+    "enterSuperPin": "输入超级PIN码",
+    "@enterSuperPin": {
+        "description": "应用的超级PIN码"
+    },
+    "onlyPinYouNeedToRemember": "唯一需要记住的PIN码",
+    "@onlyPinYouNeedToRemember": {
+        "description": ""
+    },
+    "confirmYourPin": "确认超级PIN码",
+    "@confirmYourPin": {
+        "description": "确认超级PIN码"
     },
     "greetings": "欢迎回来",
     "@greetings": {
-        "description": "欢迎用户的问候语"
+        "description": "用户的问候消息"
     },
     "yourName": "您的名字",
     "@yourName": {
-        "description": "用户名输入占位符"
+        "description": "用户名字的占位"
     },
     "safetyScore": "安全评分",
     "@safetyScore": {
-        "description": "密码安全评分"
+        "description": "密码安全评分基准"
     },
     "totalPassword": "{value} 个密码",
     "@totalPassword": {
-        "description": "用户保存的总密码数量",
+        "description": "用户存储的总密码数",
         "placeholders": {
             "value": {
                 "type": "int"
@@ -51,15 +67,105 @@
     },
     "enterYourName": "输入您的名字",
     "@enterYourName": {
-        "description": "输入框提示"
+        "description": "文本字段提示"
     },
+    "recentlyAdded": "最近添加",
+    "@recentlyAdded": {
+        "description": "最近添加"
+    },
+    "card": "卡片",
+    "@card": {},
+    "cards": "卡片",
+    "@cards": {},
+    "login": "登录",
+    "@login": {},
+    "addAccounts": "添加账户",
+    "@addAccounts": {},
+    "accountType": "账户类型",
+    "@accountType": {},
+    "siteNameHelperText": "网站名称（例如 Google, Facebook）",
+    "@siteNameHelperText": {},
+    "emailUserNameNumberHelperText": "电子邮件 或 用户名 或 手机号",
+    "@emailUserNameNumberHelperText": {},
+    "password": "密码",
+    "@password": {
+        "description": "网站的密码"
+    },
+    "bankName": "银行名称",
+    "@bankName": {
+        "description": "卡所属银行名称"
+    },
+    "holderName": "持有人姓名",
+    "@holderName": {
+        "description": "卡片持有人姓名"
+    },
+    "expireOn": "有效期至",
+    "@expireOn": {
+        "description": "卡片的到期日"
+    },
+    "greenPin": "绿色PIN",
+    "@greenPin": {
+        "description": "绿色PIN"
+    },
+    "addSuccessfully": "添加成功",
+    "@addSuccessfully": {
+        "description": "成功提示"
+    },
+    "somethingWentWrong": "出了点问题",
+    "@somethingWentWrong": {
+        "description": "错误提示"
+    },
+    "add": "添加",
+    "@add": {
+        "description": "添加按钮"
+    },
+    "delete": "删除",
+    "@delete": {
+        "description": "删除按钮"
+    },
+    "cancel": "取消",
+    "@cancel": {
+        "description": "取消按钮"
+    },
+    "all": "全部",
+    "@all": {
+        "description": "全部按钮"
+    },
+    "error": "错误",
+    "@error": {
+        "description": "错误"
+    },
+    "deleteWarning": "此操作无法撤销",
+    "@deleteWarning": {
+        "description": "删除警告"
+    },
+    "writeNoteHelperText": "写备注",
+    "@writeNoteHelperText": {
+        "description": "写备注提示文本"
+    },
+    "pwEncrptionAlgorithm": "密码加密算法",
+    "@pwEncrptionAlgorithm": {
+        "description": ""
+    },
+    "pwEncryptionAlgorithmSubtitle": "更改加密算法不会影响您已有的密码。但新密码将使用所选算法加密。",
+    "@pwEncryptionAlgorithmSubtitle": {},
+    "pwGenerator": "密码生成器",
+    "@pwGenerator": {
+        "description": "密码生成器标题"
+    },
+    "includeNumbers": "包含数字",
+    "@includeNumbers": {},
+    "includeSymbols": "包含符号",
+    "@includeSymbols": {},
+    "copied": "已复制",
+    "@copied": {},
     "security": "安全",
     "@security": {
         "description": "安全"
     },
-    "securitySubtitle": "修改密码，自毁选项",
+    "securitySubtitle": "更改密码，自毁功能",
     "@securitySubtitle": {
-        "description": "安全选项说明"
+        "description": "描述安全按钮功能的帮助文本"
     },
     "language": "语言",
     "@language": {
@@ -67,6 +173,6 @@
     },
     "languageSubtitle": "更改语言",
     "@languageSubtitle": {
-        "description": "语言更改副标题"
+        "description": "语言按钮的副标题"
     }
 }
